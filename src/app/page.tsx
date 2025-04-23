@@ -1,5 +1,5 @@
-import Navbar from "@components/layout/Navbar";
-import ExampleIcon from "@/assets/example.svg";
+
+import ExampleIcon from "@/assets/icons/example.svg";
 
 export default async function Home() {
   // fetching Example
@@ -9,13 +9,13 @@ export default async function Home() {
 
   return (
     <div className="font-hanken">
-      <Navbar />
-
       <div>
         <ExampleIcon className="w-10 h-10 text-brand-smithApple" />
         <p>Data fetch example : {response.message}</p>
-
-      </div>
+        <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  </div>
     </div>
   );
 }
