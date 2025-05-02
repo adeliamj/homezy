@@ -69,7 +69,7 @@ const Footer = () => {
             {socialMedias.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-secondary-dark-100 p-8 rounded-5xl w-32 h-32 text-secondary-light"
+                className="flex items-center justify-center bg-secondary-dark-100 p-8 rounded-5xl w-32 h-32 text-secondary-white"
                 aria-label={item.label}
               >
                 {item.icon}

@@ -31,8 +31,8 @@ const Button = ({
 
   const variantClass =
     variant === 'primary'
-      ? 'border border-secondary-dark bg-transparent text-secondary-dark'
-      : 'border-transparent bg-secondary-dark text-secondary-light';
+      ? 'border border-secondary-dark-100 bg-transparent text-secondary-dark-100'
+      : 'border-transparent bg-secondary-dark-100 text-secondary-white';
 
   const sizeClassMap: Record<string, string> = {
     xl: 'gap-8 px-32 py-16 text-normal-bold',
