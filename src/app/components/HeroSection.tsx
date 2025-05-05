@@ -5,7 +5,7 @@ import HouseIllustration1 from "@/assets/images/house-illustration-1.png";
 import HouseIllustration2 from "@/assets/images/house-illustration-2.png";
 import ProfilePerson from "@/assets/images/profile-person.png";
 import CTA from "@components/fragments/CTA";
-import Location from "@/assets/icons/location.svg";
+import LocationFill from "@/assets/icons/location-fill.svg";
 import Subtract from "@/assets/icons/subtract.svg";
 import Price from "@/assets/icons/price.svg";
 import House from "@/assets/icons/house.svg";
@@ -25,7 +25,7 @@ const socialMedias = [
 const HeroSection = () => {
   const items = [
     {
-      icon: <Location className="w-20 h-20 lg:w-20 lg:h-20" />,
+      icon: <LocationFill className="w-20 h-20 lg:w-20 lg:h-20" />,
       label: "Location",
       value: "California, US",
     },

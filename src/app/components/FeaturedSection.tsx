@@ -1,5 +1,7 @@
 import React from "react";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
+import CardFeatured from "@components/fragments/CardFeatured";
+
 
 const FeaturedSection = () => {
   return (
@@ -11,6 +13,7 @@ const FeaturedSection = () => {
           <ArrowRight className="w-24 h-24"/>
         </div>
       </div>
+      <CardFeatured/>
     </div>
   );
 };
