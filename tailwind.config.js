@@ -162,6 +162,7 @@ module.exports = {
       344: toRem(344),
       358: toRem(358),
       360: toRem(360),
+      365: toRem(365),
       371: toRem(371),
       384: toRem(384),
       386: toRem(386),
@@ -244,6 +245,7 @@ module.exports = {
       borderRadius: {
         xs: `${toRem(2)}`,
         sm: `${toRem(4)}`,
+        md: `${toRem(15)}`,
         "3xl": `${toRem(32)}`,
         "4xl": `${toRem(40)}`,
         "5xl": `${toRem(48)}`,

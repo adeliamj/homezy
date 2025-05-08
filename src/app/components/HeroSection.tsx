@@ -43,12 +43,12 @@ const HeroSection = () => {
 
   return (
     <div className="relative w-full ">
-    <Image
-      src={Pattern}
-      alt="Background Pattern"
-      fill
-      className="object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
-    />
+      <Image
+        src={Pattern}
+        alt="Background Pattern"
+        fill
+        className="object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
+      />
       <div className="relative flex flex-row gap-160 px-8 py-16 z-10">
         <div className="w-608">
           <div className="text-heading-1 font-syne">
@@ -142,7 +142,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
