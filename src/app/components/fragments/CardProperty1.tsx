@@ -38,8 +38,8 @@ const CardProperty1 = () => {
   ];
 
   return (
-    <div className="flex w-full bg-secondary-white rounded-md">
-      <div className="w-500 h-420 overflow-hidden rounded-tl-4xl ">
+    <div className="flex min-w-365 w-full bg-secondary-white rounded-15">
+      <div className="w-500 h-420 overflow-hidden rounded-tl-40 ">
         <Image
           src={property.image}
           alt="Logo"
@@ -92,7 +92,7 @@ const CardProperty1 = () => {
           {property.description}
           <span className="text-lg-bold">Read More</span>
         </div>
-        <div className="mt-40 bg-brand-lavender-20 w-full flex gap-48 p-20 rounded-md">
+        <div className="mt-40 bg-brand-lavender-20 w-full flex gap-48 p-20 rounded-15">
           {items.map((item, index) => (
             <div key={index}>
               <div className="text-normal-regular text-secondary-dark-80 pb-8">

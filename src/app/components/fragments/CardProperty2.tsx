@@ -17,7 +17,7 @@ interface CardPropertyProps {
     size: string;
   };
 }
-const CardProperty2: React.FC<CardPropertyProps> = ({ property }) => {
+const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
   const items = [
     {
       icon: <Bed className="w-24 h-24" />,
@@ -34,8 +34,8 @@ const CardProperty2: React.FC<CardPropertyProps> = ({ property }) => {
   ];
 
   return (
-    <div className="w-full rounded-md border border-brand-lavender-40 bg-secondary-white">
-      <div className="w-full h-190 overflow-hidden rounded-t-md ">
+    <div className="min-w-362 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
+      <div className="w-full h-190 overflow-hidden rounded-t-15 ">
         <Image
           src={property.image}
           alt="Logo"
@@ -72,4 +72,4 @@ const CardProperty2: React.FC<CardPropertyProps> = ({ property }) => {
   );
 };
 
-export default CardProperty2;
+export default CardBenefit;

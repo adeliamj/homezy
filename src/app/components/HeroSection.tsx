@@ -8,7 +8,7 @@ import CTA from "@components/fragments/CTA";
 import LocationFill from "@/assets/icons/location-fill.svg";
 import Subtract from "@/assets/icons/subtract.svg";
 import Price from "@/assets/icons/price.svg";
-import House from "@/assets/icons/house.svg";
+import HouseFill from "@/assets/icons/house-fill.svg";
 import Button from "@components/ui/Button";
 import PhoneCall from "@/assets/icons/phone-call.svg";
 import Instagram from "@/assets/icons/instagram.svg";
@@ -35,14 +35,14 @@ const HeroSection = () => {
       value: "$1200/month",
     },
     {
-      icon: <House className="w-20 h-20 lg:w-20 lg:h-20" />,
+      icon: <HouseFill className="w-20 h-20 lg:w-20 lg:h-20" />,
       label: "Property Type",
       value: "Apartment",
     },
   ];
 
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full overflow-hidden">
       <Image
         src={Pattern}
         alt="Background Pattern"
@@ -80,7 +80,7 @@ const HeroSection = () => {
         <div className="items-start justify-start text-left">
           <div className="flex">
             <div className="w-248 h-362">
-              <div className="w-248 h-264 border-2 relative overflow-hidden rounded-tl-4xl rounded-tr-4xl rounded-br-3xl rounded-bl-none">
+              <div className="w-248 h-264 border-2 relative overflow-hidden rounded-tl-40 rounded-tr-40 rounded-br-32 rounded-bl-none">
                 <Image
                   src={HouseIllustration1}
                   alt="Logo"
@@ -97,7 +97,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="z-10">
-              <div className="mt-50 -ml-40 flex bg-secondary-white p-16 border-2 rounded-3xl justify-between gap-42 items-center">
+              <div className="mt-50 -ml-40 flex bg-secondary-white p-16 border-2 rounded-32 justify-between gap-42 items-center">
                 <div className="whitespace-nowrap">
                   <p className="text-normal-bold text-secondary-dark-100">
                     Edwin Martins
@@ -109,7 +109,7 @@ const HeroSection = () => {
                     {socialMedias.map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-center bg-secondary-dark-80 p-4 rounded-5xl w-16 h-16 text-secondary-white"
+                        className="flex items-center justify-center bg-secondary-dark-80 p-4 rounded-48 w-16 h-16 text-secondary-white"
                         aria-label={item.label}
                       >
                         {item.icon}
@@ -130,7 +130,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="ml-264 -mt-186 w-248 h-340">
-            <div className=" w-248 h-340 border-2 relative overflow-hidden rounded-4xl">
+            <div className=" w-248 h-340 border-2 relative overflow-hidden rounded-40">
               <Image
                 src={HouseIllustration2}
                 alt="Logo"
