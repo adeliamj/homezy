@@ -4,7 +4,7 @@ import CardCategories from "@components/fragments/CardCategories";
 
 const CategoriesSection = () => {
   return (
-    <div className="my-80">
+    <div className="my-80 ">
       <div className="justify-between flex">
         <div className="text-heading-2 font-syne">Featured Categories</div>
         <div className="text-lg-bold flex gap-8">
@@ -12,7 +12,7 @@ const CategoriesSection = () => {
           <ArrowRight className="w-24 h-24" />
         </div>
       </div>
-      <div className="pt-64 gap-32 w-full flex">
+      <div className="pt-64 gap-32 w-full md:flex">
         <CardCategories />
       </div>
     </div>

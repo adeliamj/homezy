@@ -3,7 +3,7 @@ import CardBenefit from "@components/fragments/CardBenefit"
 
 const BenefitSection = () => {
   return (
-    <div className="py-80">
+    <div className="py-80 ">
       <div className="justify-between flex items-center">
         <div className="text-heading-2 font-syne w-485">
           Comfort Is Our Top Priority For You
@@ -13,7 +13,7 @@ const BenefitSection = () => {
           because we are very concerned about our consumer satisfaction
         </div>
       </div>
-      <div className="pt-64 gap-32 w-full flex">
+      <div className="pt-64 gap-32 w-full md:flex">
       <CardBenefit/>
       </div>
       

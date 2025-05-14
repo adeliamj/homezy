@@ -18,7 +18,7 @@ const FeaturedSection = () => {
         </div>
       </div>
       <CardProperty1 />
-      <div className="pt-40 flex gap-32">
+      <div className="pt-40 md:flex gap-32">
         {filteredProperties.map((property) => (
           <CardProperty2 key={property.id} property={property} />
         ))}

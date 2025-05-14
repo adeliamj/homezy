@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from 'next/font/google';
-import { Syne } from 'next/font/google';
+import { Hanken_Grotesk } from "next/font/google";
+import { Syne } from "next/font/google";
 import Navbar from "@components/layout/Navbar";
 import Footer from "@components/layout/Footer";
 import "./globals.css";
@@ -12,9 +12,9 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 const syne = Syne({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-syne', 
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +27,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${hankenGrotesk.variable} ${syne.variable}`}>
-      <body className="bg-white font-hanken px-20 md:px-60 2lg:px-140 font-hanken bg-background">
+      <body className="bg-white font-hanken mx-20 md:mx-60 2lg:mx-140 bg-background">
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

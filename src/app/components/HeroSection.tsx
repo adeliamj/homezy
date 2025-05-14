@@ -42,30 +42,32 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full md:overflow-hidden">
       <Image
         src={Pattern}
         alt="Background Pattern"
         fill
-        className="object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
+        className="hidden md:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
       />
-      <div className="relative flex flex-row gap-160 px-8 py-16 z-10">
-        <div className="w-608">
-          <div className="text-heading-1 font-syne">
+      <div className="relative md:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
+        <div className="md:w-608">
+          <div className="text-mobile-heading-1 md:text-heading-1 font-syne">
             We help people to realize their dream property
           </div>
           <div className="mt-24 text-xl-regular text-secondary-dark-60">
             We are creative people who provide the best way to you who want to
             have a new comfortable and suitable place to live
           </div>
-          <div className="mt-64 flex justify-between border items-center bg-secondary-white h-96 w-763 px-20 rounded-xl border-secondary-dark-100">
+          <div className="mt-40 md:mt-64 md:flex justify-between border items-center bg-secondary-white md:h-96 md:w-763 px-16 py-18 md:py-0 md:px-20 rounded-xl border-secondary-dark-100">
             {items.map((item, index) => (
-              <CTA
-                key={index}
-                icon={item.icon}
-                label={item.label}
-                value={item.value}
-              />
+              <div className="pb-34 md:pb-0">
+                <CTA
+                  key={index}
+                  icon={item.icon}
+                  label={item.label}
+                  value={item.value}
+                />
+              </div>
             ))}
             <div>
               <Button
@@ -73,43 +75,45 @@ const HeroSection = () => {
                 mobileSize="md"
                 desktopSize="lg"
                 text="Browse"
+                className="w-full md:w-fit"
               />
             </div>
           </div>
         </div>
-        <div className="items-start justify-start text-left">
+        <div className="mt-96 md:mt-0 items-start justify-start text-left">
           <div className="flex">
-            <div className="w-248 h-362">
-              <div className="w-248 h-264 border-2 relative overflow-hidden rounded-tl-40 rounded-tr-40 rounded-br-32 rounded-bl-none">
+            <div className="w-161 h-235 md:w-248 md:h-362">
+              <div className="w-161 h-172 md:w-248 md:h-264 border-2 relative overflow-hidden rounded-tl-26 rounded-tr-26 rounded-br-20 md:rounded-tl-40 md:rounded-tr-40 md:rounded-br-32 rounded-bl-none">
                 <Image
                   src={HouseIllustration1}
                   alt="Logo"
                   width={582}
                   height={387}
-                  className="object-cover -z-10 w-582 h-387 -mt-80"
+                  className="object-cover -z-10 w-231 h-186 md:w-582 md:h-387 md:-mt-80 overflow-hidden"
                 />
               </div>
               <div className="-mt-8 flex justify-center items-center relative">
-                <Subtract />
-                <div className="text-secondary-white z-10 px-22 pt-16 absolute text-sm-regular">
+                <Subtract className="hidden md:block md:w-248 md:h-106" />
+                <Subtract className="w-161 h-68 md:hidden" />
+                <div className="text-sohne-9 text-secondary-white z-10 px-14 pt-8 md:px-22 md:pt-16 absolute md:text-sm-regular">
                   We provide our best properties to give great services possible
                 </div>
               </div>
             </div>
             <div className="z-10">
-              <div className="mt-50 -ml-40 flex bg-secondary-white p-16 border-2 rounded-32 justify-between gap-42 items-center">
+              <div className="mt-32 md:mt-50 -ml-32 md:-ml-40 flex bg-secondary-white p-10 md:p-16 border-2 rounded-20 md:rounded-32 justify-between gap-26 md:gap-42 items-center">
                 <div className="whitespace-nowrap">
-                  <p className="text-normal-bold text-secondary-dark-100">
+                  <p className="text-sm-bold text-secondary-dark-100">
                     Edwin Martins
                   </p>
                   <p className="text-xs-regular text-secondary-dark-80">
                     Property Advisor
                   </p>
-                  <div className="mt-11 flex gap-8">
+                  <div className="mt-7 md:mt-11 flex gap-8">
                     {socialMedias.map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-center bg-secondary-dark-80 p-4 rounded-48 w-16 h-16 text-secondary-white"
+                        className="flex items-center justify-center bg-secondary-dark-80 p-2 md:p-4 rounded-48 w-11 h-11 md:w-16 md:h-16 text-secondary-white"
                         aria-label={item.label}
                       >
                         {item.icon}
@@ -117,20 +121,20 @@ const HeroSection = () => {
                     ))}
                   </div>
                 </div>
-                <div className="bg-brand-lavender-40 w-74 h-74">
+                <div className="bg-brand-lavender-40 w-48 h-48 md:w-74 md:h-74">
                   <Image
                     src={ProfilePerson}
                     width={74}
                     height={74}
                     alt="Logo"
-                    className="w-74 h-74"
+                    className="w-48 h-48 md:w-74 md:h-74"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="ml-264 -mt-186 w-248 h-340">
-            <div className=" w-248 h-340 border-2 relative overflow-hidden rounded-40">
+          <div className="ml-172 md:ml-264 -mt-108 md:-mt-186 w-161 h-221 md:w-248 md:h-340">
+            <div className=" w-161 h-221 md:w-248 md:h-340 border-2 relative overflow-hidden rounded-26 md:rounded-40">
               <Image
                 src={HouseIllustration2}
                 alt="Logo"

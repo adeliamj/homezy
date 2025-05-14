@@ -38,7 +38,7 @@ const CardProperty1 = () => {
   ];
 
   return (
-    <div className="flex min-w-365 w-full bg-secondary-white rounded-15">
+    <div className="hidden md:flex min-w-365 w-full bg-secondary-white rounded-15">
       <div className="w-500 h-420 overflow-hidden rounded-tl-40 ">
         <Image
           src={property.image}
@@ -49,7 +49,7 @@ const CardProperty1 = () => {
         />
       </div>
       <div className="mt-32 mx-32 w-660 items-start flex-grow">
-        <div className="pb-32 gap-165 flex justify-between">
+        <div className="pb-32 gap-165 md:flex justify-between">
           <div className="flex items-end">
             <div className="text-syne text-heading-3">
               ${property.price.toLocaleString()}
@@ -92,7 +92,7 @@ const CardProperty1 = () => {
           {property.description}
           <span className="text-lg-bold">Read More</span>
         </div>
-        <div className="mt-40 bg-brand-lavender-20 w-full flex gap-48 p-20 rounded-15">
+        <div className="mt-40 bg-brand-lavender-20 md:w-full md:flex gap-48 p-20 rounded-15">
           {items.map((item, index) => (
             <div key={index}>
               <div className="text-normal-regular text-secondary-dark-80 pb-8">
