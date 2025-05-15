@@ -157,13 +157,16 @@ module.exports = {
       244: toRem(244),
       248: toRem(248),
       256: toRem(256),
+      259: toRem(259),
       260: toRem(260),
       264: toRem(264),
       270: toRem(270),
-      282: toRem(282),
       280: toRem(280),
+      282: toRem(282),
+      287: toRem(287),
       288: toRem(288),
       290: toRem(290),
+      303: toRem(303),
       306: toRem(306),
       320: toRem(320),
       328: toRem(328),
@@ -172,6 +175,7 @@ module.exports = {
       340: toRem(340),
       344: toRem(344),
       350: toRem(350),
+      351: toRem(351),
       358: toRem(358),
       360: toRem(360),
       362: toRem(362),
@@ -220,6 +224,7 @@ module.exports = {
       720: toRem(720),
       724: toRem(724),
       750: toRem(750),
+      755: toRem(755),
       763: toRem(763),
       792: toRem(792),
       992: toRem(992),
@@ -238,9 +243,21 @@ module.exports = {
     },
     fontSize: {
       navbar: [toRem(18), { lineHeight: "100%", fontWeight: "400" }],
-      "mobile-heading-1": [
+      "heading-1-mobile": [
         toRem(42),
         { lineHeight: toRem(50), fontWeight: "600" },
+      ],
+      "heading-2-mobile": [
+        toRem(32),
+        { lineHeight: toRem(40), fontWeight: "600" },
+      ],
+      "heading-4-mobile": [
+        toRem(24),
+        { lineHeight: toRem(32), fontWeight: "600" },
+      ],
+      "heading-5-mobile": [
+        toRem(20),
+        { lineHeight: toRem(28), fontWeight: "600" },
       ],
       "heading-1": [
         toRem(72),

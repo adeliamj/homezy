@@ -27,7 +27,7 @@ const CardCategories = () => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="min-w-362 w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
+          className="mt-24 md:mt-0 md:w-362 w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
         >
           <div className="flex gap-16 items-center">
             <div className="bg-brand-lavender-40 p-14 w-60 h-60 rounded-15">

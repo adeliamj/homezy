@@ -18,7 +18,7 @@ const socialMedias = [
   { icon: <Twitter />, label: "Twitter" },
 ];
 
-const CardAgents = () => {
+const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
   const items = [
     {
       image: Agent1,
@@ -51,13 +51,43 @@ const CardAgents = () => {
       value: " Property Advisor",
     },
   ];
-
+  const selected = items[currentIndex];
   return (
     <>
+      <div className="md:hidden">
+        <div className="w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center">
+          <div>
+            <div className="text-heading-6">{items[currentIndex].label}</div>
+            <div className="text-lg-regular text-secondary-dark-80">
+              {items[currentIndex].value}
+            </div>
+            <div className="mt-11 flex gap-12">
+              {socialMedias.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center bg-secondary-dark-100 p-6 rounded-48 w-24 h-24 text-secondary-white"
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="bg-brand-carnation-40 w-108 h-108 rounded-15 overflow-hidden">
+            <Image
+              src={items[currentIndex].image}
+              width={108}
+              height={108}
+              alt="Logo"
+              className="w-108 h-108 object-cover"
+            />
+          </div>
+        </div>
+      </div>
       {items.map((item, index) => (
         <div
           key={index}
-          className="min-w-362 bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
+          className="hidden w-362 bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 md:flex justify-between items-center"
         >
           <div>
             <div className="text-heading-6">{item.label}</div>

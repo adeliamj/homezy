@@ -38,18 +38,18 @@ const CardProperty1 = () => {
   ];
 
   return (
-    <div className="hidden md:flex min-w-365 w-full bg-secondary-white rounded-15">
-      <div className="w-500 h-420 overflow-hidden rounded-tl-40 ">
+    <div className="md:flex w-full md:w-full bg-secondary-white rounded-15">
+      <div className="w-full h-259 md:w-500 md:h-420 overflow-hidden md:rounded-tl-40 rounded-15 ">
         <Image
           src={property.image}
           alt="Logo"
           width={500}
           height={420}
-          className="object-cover -z-10 w-500 h-420 overflow-hidden"
+          className="object-cover -z-10 w-full h-259 md:w-500 md:h-420 overflow-hidden"
         />
       </div>
-      <div className="mt-32 mx-32 w-660 items-start flex-grow">
-        <div className="pb-32 gap-165 md:flex justify-between">
+      <div className="p-16 md:p-0 md:mt-32 md:mx-32 w-660 items-start flex-grow">
+        <div className="pb-24 md:pb-32 gap-165 md:flex justify-between">
           <div className="flex items-end">
             <div className="text-syne text-heading-3">
               ${property.price.toLocaleString()}
@@ -59,7 +59,7 @@ const CardProperty1 = () => {
             </div>
           </div>
           {property.contact && (
-            <div className="flex gap-32 items-center">
+            <div className="mt-16 md:mt-0 flex gap-32 items-center">
               <div className=" gap-8 flex items-center ">
                 <div className="bg-brand-lavender-40 w-40 h-40 rounded-full item overflow-hidden">
                   <Image
@@ -83,16 +83,20 @@ const CardProperty1 = () => {
             </div>
           )}
         </div>
-        <div className="text-syne text-heading-4">{property.title}</div>
+        <div className=" text-syne text-heading-4-mobile md:text-heading-4">
+          {property.title}
+        </div>
         <div className="flex gap-8 text-secondary-dark-80 items-center">
           <Location className=" w-24 h-24 pb-4" />
-          <div className="text-lg-regular ">{property.address}</div>
+          <div className="text-normal-regular md:text-lg-regular ">
+            {property.address}
+          </div>
         </div>
-        <div className="pt-20 text-lg-regular text-secondary-dark-80 line-clamp-2">
+        <div className="w-303 pt-20 text-lg-regular text-secondary-dark-80 line-clamp-4 md:line-clamp-2">
           {property.description}
           <span className="text-lg-bold">Read More</span>
         </div>
-        <div className="mt-40 bg-brand-lavender-20 md:w-full md:flex gap-48 p-20 rounded-15">
+        <div className="mt-24 md:mt-40 bg-brand-lavender-20 w-303 md:w-full grid grid-cols-2 md:flex gap-6 md:gap-48 p-16 md:p-20 rounded-15">
           {items.map((item, index) => (
             <div key={index}>
               <div className="text-normal-regular text-secondary-dark-80 pb-8">

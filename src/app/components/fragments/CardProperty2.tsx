@@ -34,7 +34,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
   ];
 
   return (
-    <div className="min-w-362 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
+    <div className="mt-24 md:mt-0 w-full md:w-362 rounded-15 border border-brand-lavender-40 bg-secondary-white">
       <div className="w-full h-190 overflow-hidden rounded-t-15 ">
         <Image
           src={property.image}
@@ -44,14 +44,14 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
           className="object-cover -z-10 w-full h-190 overflow-hidden"
         />
       </div>
-      <div className="m-24 items-start flex-grow">
+      <div className="mx-16 mt-32 my-16 md:m-24 items-start flex-grow">
         <div className="flex items-end">
-          <div className="text-syne text-heading-5">
+          <div className="text-syne text-heading-4-mobile md:text-heading-5">
             ${property.price.toLocaleString()}
           </div>
           <div className="text-lg-regular text-secondary-dark-80">/ month</div>
         </div>
-        <div className="text-syne text-heading-6 no-whitespace">
+        <div className="text-syne text-heading-5-mobile md:text-heading-6 no-whitespace">
           {property.title}
         </div>
         <div className="pt-16 gap-8 text-secondary-dark-80 items-center">

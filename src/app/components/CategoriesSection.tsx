@@ -4,15 +4,15 @@ import CardCategories from "@components/fragments/CardCategories";
 
 const CategoriesSection = () => {
   return (
-    <div className="my-80 ">
-      <div className="justify-between flex">
-        <div className="text-heading-2 font-syne">Featured Categories</div>
+    <div className="my-64 md:my-80 ">
+      <div className="justify-between md:flex">
+        <div className="text-heading-2-mobile md:text-heading-2 font-syne">Featured Categories</div>
         <div className="text-lg-bold flex gap-8">
         Browse All Categories
           <ArrowRight className="w-24 h-24" />
         </div>
       </div>
-      <div className="pt-64 gap-32 w-full md:flex">
+      <div className="pt-24 md:pt-64 gap-32 w-full md:flex">
         <CardCategories />
       </div>
     </div>

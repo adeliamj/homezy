@@ -51,7 +51,7 @@ const HeroSection = () => {
       />
       <div className="relative md:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
         <div className="md:w-608">
-          <div className="text-mobile-heading-1 md:text-heading-1 font-syne">
+          <div className="text-heading-1-mobile md:text-heading-1 font-syne">
             We help people to realize their dream property
           </div>
           <div className="mt-24 text-xl-regular text-secondary-dark-60">
