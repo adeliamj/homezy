@@ -16,9 +16,9 @@ const ExploreSection = () => {
   };
 
   return (
-    <div className="my-64 md:my-80 ">
-      <div className="justify-between md:flex">
-        <div className="text-heading-2-mobile md:text-heading-2 font-syne">
+    <div className="my-64 lg:my-80 ">
+      <div className="justify-between lg:flex">
+        <div className="text-heading-2-mobile lg:text-heading-2 font-syne">
           Explore Cities
         </div>
         <div className="text-lg-bold flex gap-8">
@@ -26,10 +26,10 @@ const ExploreSection = () => {
           <ArrowRight className="w-24 h-24" />
         </div>
       </div>
-      <div className="pt-32 md:pt-64 gap-32 w-full md:flex">
+      <div className="pt-32 lg:pt-64 gap-32 w-full lg:flex">
         <CardExplore currentIndex={currentIndex} />
       </div>
-      <div className="md:hidden pt-40 justify-center items-center gap-40 flex">
+      <div className="lg:hidden pt-40 justify-center items-center gap-40 flex">
         <div
           className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={prevCard}

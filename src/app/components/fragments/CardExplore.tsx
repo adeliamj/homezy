@@ -28,8 +28,9 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
 
   return (
     <>
-      <div className="block md:hidden">
-        <div className="md:w-365 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
+    {/* Mobile */}
+      <div className="block lg:hidden">
+        <div className="lg:w-365 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
           <div className="w-full h-350 overflow-hidden rounded-t-15 border-t border-t-brand-lavender-40">
             <Image
               src={items[currentIndex].image}
@@ -52,11 +53,12 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex gap-32">
+      {/* Desktop */}
+      <div className="hidden lg:flex gap-32">
         {items.map((item, index) => (
           <div
             key={index}
-            className="min-w-365 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white"
+            className="w-full rounded-15 border border-brand-lavender-40 bg-secondary-white"
           >
             <div className="w-full h-350 overflow-hidden rounded-t-15 border-t border-t-brand-lavender-40">
               <Image

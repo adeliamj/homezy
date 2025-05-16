@@ -28,12 +28,12 @@ const CardBenefit = ({ currentIndex = 0 }: { currentIndex?: number }) => {
   return (
     <>
       {/* Mobile */}
-      <div className="block md:hidden">
-        <div className="md:w-362 w-full bg-secondary-white rounded-15 border md:p-40 p-24">
+      <div className="block lg:hidden">
+        <div className="lg:w-362 w-full bg-secondary-white rounded-15 border lg:p-40 p-24">
           <div className="bg-brand-lavender-40 rounded-15 p-20 w-90 h-90">
             {items[currentIndex].icon}
           </div>
-          <div className="pt-64 text-heading-5-mobile md:text-heading-6 text-syne">
+          <div className="pt-64 text-heading-5-mobile lg:text-heading-6 text-syne">
             {items[currentIndex].label}
           </div>
           <div className="pt-8 text-normal-regular text-secondary-dark-80">
@@ -43,16 +43,16 @@ const CardBenefit = ({ currentIndex = 0 }: { currentIndex?: number }) => {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:flex gap-32">
+      <div className="hidden lg:flex gap-32">
         {items.map((item, index) => (
           <div
             key={index}
-            className="md:w-362 w-full bg-secondary-white rounded-15 border md:p-40 p-24"
+            className="w-full bg-secondary-white rounded-15 border lg:p-40 p-24"
           >
             <div className="bg-brand-lavender-40 rounded-15 p-20 w-90 h-90">
               {item.icon}
             </div>
-            <div className="pt-64 text-heading-5-mobile md:text-heading-6 text-syne">
+            <div className="pt-64 text-heading-5-mobile lg:text-heading-6 text-syne">
               {item.label}
             </div>
             <div className="pt-8 text-normal-regular text-secondary-dark-80">

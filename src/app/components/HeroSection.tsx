@@ -47,10 +47,10 @@ const HeroSection = () => {
         src={Pattern}
         alt="Background Pattern"
         fill
-        className="hidden md:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
+        className="hidden lg:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
       />
-      <div className="relative md:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
-        <div className="md:w-608">
+      <div className="relative 2lg:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
+        <div className="2lg:w-608">
           <div className="text-heading-1-mobile md:text-heading-1 font-syne">
             We help people to realize their dream property
           </div>
@@ -58,9 +58,9 @@ const HeroSection = () => {
             We are creative people who provide the best way to you who want to
             have a new comfortable and suitable place to live
           </div>
-          <div className="mt-40 md:mt-64 md:flex justify-between border items-center bg-secondary-white md:h-96 md:w-763 px-16 py-18 md:py-0 md:px-20 rounded-xl border-secondary-dark-100">
+          <div className="mt-40 lg:mt-64 lg:flex justify-between border items-center bg-secondary-white lg:h-96 md:w-full 2lg:w-763 px-16 py-18 lg:py-0 lg:px-20 rounded-xl border-secondary-dark-100">
             {items.map((item, index) => (
-              <div className="pb-34 md:pb-0">
+              <div className="pb-34 lg:pb-0">
                 <CTA
                   key={index}
                   icon={item.icon}
@@ -75,12 +75,12 @@ const HeroSection = () => {
                 mobileSize="md"
                 desktopSize="lg"
                 text="Browse"
-                className="w-full md:w-fit"
+                className="w-full lg:w-fit"
               />
             </div>
           </div>
         </div>
-        <div className="mt-96 md:mt-0 items-start justify-start text-left">
+        <div className="mt-96 2lg:mt-0 items-start justify-start text-left">
           <div className="flex">
             <div className="w-161 h-235 md:w-248 md:h-362">
               <div className="w-161 h-172 md:w-248 md:h-264 border-2 relative overflow-hidden rounded-tl-26 rounded-tr-26 rounded-br-20 md:rounded-tl-40 md:rounded-tr-40 md:rounded-br-32 rounded-bl-none">
@@ -95,7 +95,7 @@ const HeroSection = () => {
               <div className="-mt-8 flex justify-center items-center relative">
                 <Subtract className="hidden md:block md:w-248 md:h-106" />
                 <Subtract className="w-161 h-68 md:hidden" />
-                <div className="text-sohne-9 text-secondary-white z-10 px-14 pt-8 md:px-22 md:pt-16 absolute md:text-sm-regular">
+                <div className="text-sohne-9 text-secondary-white z-10 px-14 pt-8 lg:px-22 lg:pt-16 absolute lg:text-sm-regular">
                   We provide our best properties to give great services possible
                 </div>
               </div>

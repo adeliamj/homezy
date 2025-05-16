@@ -52,7 +52,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <div className="mt-64 mb-32 ">
-      <div className="flex flex-col md:flex-row text-secondary-dark-100 justify-between">
+      <div className="flex flex-col lg:flex-row text-secondary-dark-100 justify-between">
         <div>
           <Image
             src={Logo}
@@ -61,7 +61,7 @@ const Footer = () => {
             alt="Logo"
             className="w-167 h-50 lg:w-190 lg:h-50"
           />
-          <p className="max-w-335 md:max-w-358 text-normal-regular py-24">
+          <p className=" w-full lg:max-w-358 text-normal-regular py-24">
             We are creative people who provide the best way to you who want to
             have a new confortable and suitable place to live
           </p>
@@ -77,7 +77,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between gap-104 mt-64 md:mt-0">
+        <div className="flex flex-col md:flex-row justify-between gap-104 mt-64 lg:mt-0">
           {footerLinks.map((section, index) => (
             <div key={index}>
               <div className="pb-32 text-normal-regular text-secondary-dark-80">
@@ -86,7 +86,7 @@ const Footer = () => {
               <div
                 className={`${
                   section.title === "Pages"
-                    ? "flex flex-row list-none gap-64 md:gap-80 text-normal-medium whitespace-nowrap"
+                    ? "flex flex-row list-none gap-64 lg:gap-80 text-normal-medium whitespace-nowrap"
                     : "list-none text-normal-medium"
                 }`}
               >

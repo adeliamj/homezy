@@ -54,7 +54,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
   const selected = items[currentIndex];
   return (
     <>
-      <div className="md:hidden">
+      <div className="2lg:hidden">
         <div className="w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center">
           <div>
             <div className="text-heading-6">{items[currentIndex].label}</div>
@@ -87,7 +87,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="hidden w-362 bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 md:flex justify-between items-center"
+          className="hidden w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 2lg:flex justify-between items-center"
         >
           <div>
             <div className="text-heading-6">{item.label}</div>

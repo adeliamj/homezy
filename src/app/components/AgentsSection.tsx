@@ -15,9 +15,9 @@ const AgentsSection = () => {
   };
 
   return (
-    <div className="my-64 md:my-80 ">
-      <div className="justify-between md:flex">
-        <div className="text-heading-2-mobile md:text-heading-2 font-syne">
+    <div className="my-64 2lg:my-80 ">
+      <div className="justify-between lg:flex">
+        <div className="text-heading-2-mobile 2lg:text-heading-2 font-syne">
           Meet Our Agents
         </div>
         <div className="text-lg-bold flex gap-8">
@@ -25,10 +25,10 @@ const AgentsSection = () => {
           <ArrowRight className="w-24 h-24" />
         </div>
       </div>
-      <div className="pt-32 md:pt-64 grid md:grid-cols-3 gap-32 w-full">
+      <div className="pt-32 2lg:pt-64 grid 2lg:grid-cols-3 gap-32 w-full">
         <CardAgents currentIndex={currentIndex} />
       </div>
-      <div className="md:hidden pt-40 justify-center items-center gap-40 flex">
+      <div className="2lg:hidden pt-40 justify-center items-center gap-40 flex">
         <div
           className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={prevCard}
