@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import Bed from "@/assets/icons/bed.svg";
 import Bath from "@/assets/icons/bath.svg";
@@ -38,7 +40,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
       <div className="w-full h-190 overflow-hidden rounded-t-15 ">
         <Image
           src={property.image}
-          alt="Logo"
+          alt="Images"
           width={365}
           height={190}
           className="object-cover -z-10 w-full h-190 overflow-hidden"

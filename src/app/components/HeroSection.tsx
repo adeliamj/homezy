@@ -60,13 +60,8 @@ const HeroSection = () => {
           </div>
           <div className="mt-40 lg:mt-64 lg:flex justify-between border items-center bg-secondary-white lg:h-96 md:w-full 2lg:w-763 px-16 py-18 lg:py-0 lg:px-20 rounded-xl border-secondary-dark-100">
             {items.map((item, index) => (
-              <div className="pb-34 lg:pb-0">
-                <CTA
-                  key={index}
-                  icon={item.icon}
-                  label={item.label}
-                  value={item.value}
-                />
+              <div key={index} className="pb-34 lg:pb-0">
+                <CTA icon={item.icon} label={item.label} value={item.value} />
               </div>
             ))}
             <div>

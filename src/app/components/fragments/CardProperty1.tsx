@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import ProfilePerson2 from "@/assets/images/profile-person-2.png";
 import PhoneCallFill from "@/assets/icons/phone-call-fill.svg";
@@ -10,9 +12,20 @@ import SurfaceArea from "@/assets/icons/surface-area.svg";
 import Repair from "@/assets/icons/repair.svg";
 
 const CardProperty1 = () => {
-  const property = dummyProperties.find((p) => p.id === 1);
+  const [property, setProperty] = useState<any>(null);
 
-  if (!property) return <div>Property not found</div>;
+  useEffect(() => {
+    const fetchProperty = async () => {
+      const res = await fetch("/api/property");
+      const data = await res.json();
+      const selected = data.find((p: any) => p.id === 1);
+      setProperty(selected);
+    };
+
+    fetchProperty();
+  }, []);
+
+  if (!property) return <div>Loading...</div>;
 
   const items = [
     {
@@ -42,7 +55,7 @@ const CardProperty1 = () => {
       <div className="w-full h-full lg:w-500 lg:h-420 overflow-hidden md:rounded-tl-40 rounded-15 ">
         <Image
           src={property.image}
-          alt="Logo"
+          alt="Images"
           width={500}
           height={420}
           className="object-cover -z-10 w-full h-259 md:w-648 md:h-420 lg:w-500 lg:h-420 overflow-hidden"

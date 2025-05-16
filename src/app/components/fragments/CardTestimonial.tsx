@@ -1,37 +1,32 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import StarRating from "./StarRating";
 import Logo from "@/assets/icons/logo.svg";
 
+type TestimonialItem = {
+  rating: number;
+  review: string;
+  name: string;
+  position: string;
+};
 const CardTestimonial = ({ currentIndex = 0 }: { currentIndex?: number }) => {
-  const items = [
-    {
-      rating: "5",
-      review:
-        "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business.",
-      name: "Brooklyn Simmons",
-      position: "CEO of Asana",
-    },
-    {
-      rating: "4",
-      review:
-        "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business.",
-      name: "Brooklyn Simmons",
-      position: "CEO of Asana",
-    },
-    {
-      rating: "3",
-      review:
-        "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business.",
-      name: "Brooklyn Simmons",
-      position: "CEO of Asana",
-    },
-  ];
-  const selected = items[currentIndex];
+  const [items, setItems] = useState<TestimonialItem[]>([]);
+
+  useEffect(() => {
+    fetch("/api/testimonial")
+      .then((res) => res.json())
+      .then((data) => setItems(data));
+  }, []);
+
+  if (items.length === 0) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <div className="md:hidden">
         <div className="w-full h-full md:w-480 md:h-334 p-32 rounded-15 border border-brand-lavender-40 bg-secondary-white">
-          <StarRating rating={parseInt(items[currentIndex].rating)} />
+          <StarRating rating={items[currentIndex].rating} />
           <div className="text-secondary-dark-80 py-32 text-xl-regular">
             {items[currentIndex].review}
           </div>
@@ -55,7 +50,7 @@ const CardTestimonial = ({ currentIndex = 0 }: { currentIndex?: number }) => {
           key={index}
           className="hidden md:block w-full h-full md:w-480 md:h-334 p-32 rounded-15 border border-brand-lavender-40 bg-secondary-white"
         >
-          <StarRating rating={parseInt(item.rating)} />
+          <StarRating rating={item.rating} />
           <div className="text-secondary-dark-80 py-32 text-xl-regular">
             {item.review}
           </div>
