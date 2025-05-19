@@ -9,7 +9,7 @@ import SurfaceArea from "@/assets/icons/surface-area.svg";
 interface CardPropertyProps {
   property: {
     title: string;
-    image: any;
+    image: string;
     price: number;
     per?: string;
     address: string;

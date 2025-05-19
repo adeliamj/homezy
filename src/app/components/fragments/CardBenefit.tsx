@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from "react";
 import Coin from "@/assets/icons/coin.svg";
 import LikeShape from "@/assets/icons/like-shapes.svg";

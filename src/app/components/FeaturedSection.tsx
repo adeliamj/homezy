@@ -4,11 +4,10 @@ import React, { useEffect, useState } from "react";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import CardProperty1 from "./fragments/CardProperty1";
 import CardProperty2 from "./fragments/CardProperty2";
-import { dummyProperties } from "@components/dataservices/dummyProperty";
 
 interface PropertyItems {
   id: number;
-  image: any;
+  image: string;
   price: number;
   per?: string;
   title: string;

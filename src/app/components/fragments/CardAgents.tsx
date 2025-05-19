@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from "react";
 import PhoneCall from "@/assets/icons/phone-call.svg";
 import Instagram from "@/assets/icons/instagram.svg";

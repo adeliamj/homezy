@@ -1,25 +1,43 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ProfilePerson2 from "@/assets/images/profile-person-2.png";
 import PhoneCallFill from "@/assets/icons/phone-call-fill.svg";
 import Location from "@/assets/icons/location.svg";
-import { dummyProperties } from "@components/dataservices/dummyProperty";
 import Bed from "@/assets/icons/bed.svg";
 import Bath from "@/assets/icons/bath.svg";
 import SurfaceArea from "@/assets/icons/surface-area.svg";
 import Repair from "@/assets/icons/repair.svg";
+interface Property {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  per?: string;
+  address: string;
+  description?: string;
+  bedrooms: number;
+  bathrooms: number;
+  size: string;
+  type?: string;
+  contact?: {
+    name: string;
+    role: string;
+    company: string;
+    officeAddress: string;
+  };
+}
 
 const CardProperty1 = () => {
-  const [property, setProperty] = useState<any>(null);
+  const [property, setProperty] = useState<Property | null>(null);
 
   useEffect(() => {
     const fetchProperty = async () => {
       const res = await fetch("/api/property");
-      const data = await res.json();
-      const selected = data.find((p: any) => p.id === 1);
-      setProperty(selected);
+      const data: Property[] = await res.json(); // kasih tipe array properti
+      const selected = data.find((p: Property) => p.id === 1);
+      setProperty(selected || null);
     };
 
     fetchProperty();
