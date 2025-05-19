@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,11 +7,8 @@ import HouseIllustration1 from "@/assets/images/house-illustration-1.png";
 import HouseIllustration2 from "@/assets/images/house-illustration-2.png";
 import ProfilePerson from "@/assets/images/profile-person.png";
 import CTA from "@components/fragments/CTA";
-import LocationFill from "@/assets/icons/location-fill.svg";
+
 import Subtract from "@/assets/icons/subtract.svg";
-import Price from "@/assets/icons/price.svg";
-import HouseFill from "@/assets/icons/house-fill.svg";
-import Button from "@components/ui/Button";
 import PhoneCall from "@/assets/icons/phone-call.svg";
 import Instagram from "@/assets/icons/instagram.svg";
 import Facebook from "@/assets/icons/facebook.svg";
@@ -25,24 +22,6 @@ const socialMedias = [
 ];
 
 const HeroSection = () => {
-  const items = [
-    {
-      icon: <LocationFill className="w-20 h-20 lg:w-20 lg:h-20" />,
-      label: "Location",
-      value: "California, US",
-    },
-    {
-      icon: <Price className="w-20 h-20 lg:w-20 lg:h-20" />,
-      label: "Price",
-      value: "$1200/month",
-    },
-    {
-      icon: <HouseFill className="w-20 h-20 lg:w-20 lg:h-20" />,
-      label: "Property Type",
-      value: "Apartment",
-    },
-  ];
-
   return (
     <div className="relative w-full md:overflow-hidden">
       <Image
@@ -60,21 +39,8 @@ const HeroSection = () => {
             We are creative people who provide the best way to you who want to
             have a new comfortable and suitable place to live
           </div>
-          <div className="mt-40 lg:mt-64 lg:flex justify-between border items-center bg-secondary-white lg:h-96 md:w-full 2lg:w-763 px-16 py-18 lg:py-0 lg:px-20 rounded-xl border-secondary-dark-100">
-            {items.map((item, index) => (
-              <div key={index} className="pb-34 lg:pb-0">
-                <CTA icon={item.icon} label={item.label} value={item.value} />
-              </div>
-            ))}
-            <div>
-              <Button
-                variant="secondary"
-                mobileSize="md"
-                desktopSize="lg"
-                text="Browse"
-                className="w-full lg:w-fit"
-              />
-            </div>
+          <div className="mt-40 lg:mt-64">
+            <CTA />
           </div>
         </div>
         <div className="mt-96 2lg:mt-0 items-start justify-start text-left">
