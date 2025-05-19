@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import CardCategories from "@components/fragments/CardCategories";

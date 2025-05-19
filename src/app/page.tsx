@@ -1,3 +1,5 @@
+'use client';
+
 import HeroSection from "@components/HeroSection";
 import FeaturedSection from "@components/FeaturedSection";
 import BenefitSection from "@components/BenefitSection";
@@ -8,11 +10,6 @@ import TestimonialSection from "@components/TestimonialSection";
 import CTASection from "@components/CTASection";
 
 export default async function Home() {
-  // fetching Example
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/example`
-  ).then((res) => res.json());
-
   return (
     <div className="">
       <div>
@@ -24,7 +21,6 @@ export default async function Home() {
         <AgentsSection />
         <TestimonialSection />
         <CTASection />
-        <p>Data fetch example : {response.message}</p>
       </div>
     </div>
   );

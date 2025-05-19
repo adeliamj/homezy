@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import Pattern2 from "@/assets/images/pattern-2.png";
