@@ -8,6 +8,7 @@ import RowVertical from "assets/icons/row-vertical.svg";
 import ArrowDown from "assets/icons/arrow-down.svg";
 import CardProperty2 from "@components/fragments/CardProperty2";
 import dynamic from "next/dynamic";
+import PopupFilter from "@components/fragments/PopupFilter";
 
 const Maps = dynamic(() => import("@components/ui/Maps"), { ssr: false });
 
@@ -30,7 +31,6 @@ const Page = () => {
   const [properties, setProperties] = useState<PropertyItems[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isGridView, setIsGridView] = useState(true);
-
 
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
@@ -85,6 +85,8 @@ const Page = () => {
     }
     return pages;
   };
+
+  const [showFilter, setShowFilter] = useState(false);
   return (
     <>
       <div className="text-heading-2-mobile text-syne 2lg:text-heading-2">
@@ -93,17 +95,28 @@ const Page = () => {
 
       <div className="mt-32 2lg:mt-40 flex-col 2lg:flex-row 2lg:flex gap-24">
         <CTA />
-        <div className="mt-16 gap-12 2lg:mt-0 flex 2lg:flex-col bg-brand-lavender-40 w-full 2lg:w-fit border items-center p-20 justify-center rounded-15">
-          <Candle className="w-24 h-24" />
-          <p className="text-normal-medium text-nowrap">More Filter</p>
+        <div className="relative flex flex-col items-center w-fit">
+          <div
+            className="mt-16 gap-12 2lg:mt-0 flex 2lg:flex-col bg-brand-lavender-40 w-full 2lg:w-fit border items-center p-20 justify-center rounded-15 cursor-pointer"
+            onClick={() => setShowFilter(!showFilter)}
+          >
+            <Candle className="w-24 h-24" />
+            <p className="text-normal-medium whitespace-nowrap">More Filter</p>
+          </div>
+
+          {/* PopupFilter dengan posisi absolute dan z-index tinggi */}
+          {showFilter && (
+            <div className="mt-28 absolute top-full right-0 z-[9999]">
+              <PopupFilter onClose={() => setShowFilter(false)} />
+            </div>
+          )}
         </div>
       </div>
-
       <div>
         <Maps markers={markers} />
       </div>
 
-      <div className="mt-32">
+      <div className="mt-32 mb-270">
         <div className="flex justify-between">
           <p className="text-syne text-heading-4">
             {properties.length} Results
