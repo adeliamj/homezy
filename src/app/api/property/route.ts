@@ -20,6 +20,10 @@ export async function GET() {
         company: "COVA Home Realty",
         officeAddress: "2699 Green Valley, Highland Lake, FL",
       },
+      location: {
+        lat: 27.2986,
+        lng: -81.3623,
+      },
     },
     {
       image: "/images/property-2.png",
@@ -29,6 +33,10 @@ export async function GET() {
       bedrooms: 4,
       bathrooms: 4,
       size: "5x7 m²",
+      location: {
+        lat: 51.5755,
+        lng: 0.0555,
+      },
     },
     {
       image: "/images/property-3.png",
@@ -39,6 +47,10 @@ export async function GET() {
       bedrooms: 3,
       bathrooms: 2,
       size: "5x7 m²",
+      location: {
+        lat: 53.7521,
+        lng: -0.3696,
+      },
     },
     {
       image: "/images/house-illustration-2.png",
@@ -49,6 +61,10 @@ export async function GET() {
       bedrooms: 3,
       bathrooms: 2,
       size: "5x7 m²",
+      location: {
+        lat: 51.5557,
+        lng: -0.1415,
+      },
     },
   ];
 

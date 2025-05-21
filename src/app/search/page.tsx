@@ -12,6 +12,14 @@ import PopupFilter from "@components/fragments/PopupFilter";
 
 const Maps = dynamic(() => import("@components/ui/Maps"), { ssr: false });
 
+import {
+  HotelFilterSelectedType,
+  HotelFilterType,
+  HotelResultType,
+  HotelSearchValuesType,
+  MarkerType,
+} from "app/types/hotel.type";
+
 interface PropertyItems {
   id: number;
   image: string;
@@ -23,14 +31,17 @@ interface PropertyItems {
   bedrooms: number;
   bathrooms: number;
   size: string;
-  latitude: number; // Added latitude
-  longitude: number; // Added longitude
 }
 
 const Page = () => {
   const [properties, setProperties] = useState<PropertyItems[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isGridView, setIsGridView] = useState(true);
+
+  const [hotelResult, setHotelResult] = useState<HotelResultType[] | null>(
+    null
+  );
+  const [markers, setMarkers] = useState<MarkerType[]>([]);
 
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,20 +69,6 @@ const Page = () => {
     fetchProperties();
   }, []);
 
-  // Create markers array for Maps component
-  // If your data doesn't have latitude/longitude, replace with dummy coords here
-  const markers = properties.map((property, index) => ({
-    idHotel: property.id,
-    position:
-      property.latitude !== undefined && property.longitude !== undefined
-        ? ([property.latitude, property.longitude] as [number, number])
-        : ([-6.2 + index * 0.01, 106.816666 + index * 0.01] as [
-            number,
-            number
-          ]), // Dummy coords
-    text: property.price.toString(),
-  }));
-
   const getPageNumbers = () => {
     let start = currentPage;
     if (currentPage > totalPages - 2) {
@@ -87,15 +84,38 @@ const Page = () => {
   };
 
   const [showFilter, setShowFilter] = useState(false);
+
+  useEffect(() => {
+    if (hotelResult) {
+      setMarkers(
+        hotelResult
+          .filter((item) => item.location)
+          .map((item) => ({
+            position: [item.location!.lat, item.location!.lng] as [
+              number,
+              number
+            ],
+            text: item.discountPrice
+              ? `${item.discountPrice}`
+              : `${item.originalPrice}`,
+            idHotel: item.idHotel,
+          }))
+      );
+    }
+  }, [hotelResult]);
+
   return (
     <>
       <div className="text-heading-2-mobile text-syne 2lg:text-heading-2">
         Search Properties
       </div>
 
-      <div className="mt-32 2lg:mt-40 flex-col 2lg:flex-row 2lg:flex gap-24">
-        <CTA />
-        <div className="relative flex flex-col items-center w-fit">
+      <div className="mt-32 2lg:mt-40 flex-col 2lg:flex-row 2lg:flex gap-24 w-full">
+        <div className='w-full'>
+          <CTA />
+        </div>
+
+        <div className="relative flex flex-col items-center w-full 2lg:w-fit">
           <div
             className="mt-16 gap-12 2lg:mt-0 flex 2lg:flex-col bg-brand-lavender-40 w-full 2lg:w-fit border items-center p-20 justify-center rounded-15 cursor-pointer"
             onClick={() => setShowFilter(!showFilter)}
@@ -104,7 +124,6 @@ const Page = () => {
             <p className="text-normal-medium whitespace-nowrap">More Filter</p>
           </div>
 
-          {/* PopupFilter dengan posisi absolute dan z-index tinggi */}
           {showFilter && (
             <div className="mt-28 absolute top-full right-0 z-[9999]">
               <PopupFilter onClose={() => setShowFilter(false)} />
@@ -112,7 +131,8 @@ const Page = () => {
           )}
         </div>
       </div>
-      <div>
+
+      <div className="mt-40 z-[0] h-240 w-full overflow-hidden rounded-2xl bg-gray-30 md:h-410 xxxl:h-410-fluid xxxl:rounded-2xl-fluid">
         <Maps markers={markers} />
       </div>
 
