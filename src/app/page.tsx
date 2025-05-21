@@ -1,5 +1,3 @@
-'use client';
-
 import HeroSection from "@components/HeroSection";
 import FeaturedSection from "@components/FeaturedSection";
 import BenefitSection from "@components/BenefitSection";

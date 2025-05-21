@@ -39,7 +39,7 @@ const HeroSection = () => {
             We are creative people who provide the best way to you who want to
             have a new comfortable and suitable place to live
           </div>
-          <div className="mt-40 lg:mt-64">
+          <div className="mt-40 lg:mt-64 2lg:w-763">
             <CTA />
           </div>
         </div>

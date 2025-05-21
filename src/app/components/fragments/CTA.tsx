@@ -25,8 +25,8 @@ const items = [
 
 const CTA = () => {
   return (
-    <div className="lg:flex justify-between border items-center bg-secondary-white lg:h-96 md:w-full 2lg:w-763 px-16 py-18 lg:py-0 lg:px-20 rounded-xl border-secondary-dark-100">
-      <div className="flex flex-col lg:flex-row lg:gap-40">
+    <div className="lg:flex justify-between border items-center bg-secondary-white lg:h-96 md:w-full px-16 py-18 lg:py-0 lg:px-20 rounded-xl border-secondary-dark-100">
+      <div className="flex flex-col lg:flex-row justify-between w-full">
         {items.map((item, index) => (
           <div key={index} className="pb-32 lg:pb-0">
             <div className="flex items-center gap-12">
@@ -37,13 +37,13 @@ const CTA = () => {
                 <div className="text-sm-regular text-secondary-dark-80 whitespace-nowrap">
                   {item.label}
                 </div>
-                <div className="text-normal-bold whitespace-nowrap">{item.value}</div>
+                <div className="text-normal-bold whitespace-nowrap">
+                  {item.value}
+                </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-      <div>
         <Button
           variant="secondary"
           mobileSize="md"
@@ -52,6 +52,7 @@ const CTA = () => {
           className="w-full lg:w-fit"
         />
       </div>
+      <div></div>
     </div>
   );
 };

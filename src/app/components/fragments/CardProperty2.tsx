@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Bed from "@/assets/icons/bed.svg";
 import Bath from "@/assets/icons/bath.svg";
@@ -36,7 +36,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
   ];
 
   return (
-    <div className="mt-24 lg:mt-0 w-full lg:w-362 rounded-15 border border-brand-lavender-40 bg-secondary-white">
+    <div className="mt-24 lg:mt-0 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
       <div className="w-full h-190 overflow-hidden rounded-t-15 ">
         <Image
           src={property.image}
@@ -53,7 +53,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
           </div>
           <div className="text-lg-regular text-secondary-dark-80">/ month</div>
         </div>
-        <div className="text-syne text-heading-5-mobile lg:text-heading-6 no-whitespace">
+        <div className="text-syne text-heading-5-mobile lg:text-heading-5no-whitespace">
           {property.title}
         </div>
         <div className="pt-16 gap-8 text-secondary-dark-80 items-center">

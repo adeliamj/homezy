@@ -39,7 +39,7 @@ const CardCategories = () => {
               {iconMap[item.icon]}
             </div>
             <div>
-              <div className="text-heading-6 text-syne">{item.title}</div>
+              <div className="text-heading-5text-syne">{item.title}</div>
               <div className="text-lg-regular text-secondary-dark-80">
                 {item.total}
               </div>
