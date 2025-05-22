@@ -83,7 +83,9 @@ const CardProperty1 = () => {
         <div className="pb-24 lg:pb-32 2lg:gap-165 lg:flex justify-between">
           <div className="flex items-end">
             <div className="text-syne text-heading-3">
-              ${property.price.toLocaleString()}
+              {property.price?.toLocaleString()
+                ? `$${property.price.toLocaleString()}`
+                : "-"}
             </div>
             <div className="text-lg-regular text-secondary-dark-80">
               / {property.per}

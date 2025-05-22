@@ -1,18 +1,21 @@
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
-type CurrencyType = 'rupiah' | 'dollar';
+type PropertyCurrencyType = "rupiah" | "dollar";
 
-const useFormatCurrency = () => {
-  const formatCurrency = useCallback((amount: number, currency: CurrencyType) => {
-    if (currency === 'rupiah') {
-      return `IDR ${new Intl.NumberFormat('id-ID').format(amount)}`;
-    } else if (currency === 'dollar') {
-      return `USD ${new Intl.NumberFormat('en-US').format(amount)}`;
-    }
-    return amount.toString();
-  }, []);
+const useformatCurrency = () => {
+  const formatCurrency = useCallback(
+    (price: number, currency: PropertyCurrencyType) => {
+      if (currency === "rupiah") {
+        return `IDR ${new Intl.NumberFormat("id-ID").format(price)}`;
+      } else if (currency === "dollar") {
+        return `USD ${new Intl.NumberFormat("en-US").format(price)}`;
+      }
+      return price.toString();
+    },
+    []
+  );
 
   return { formatCurrency };
 };
 
-export default useFormatCurrency;
+export default useformatCurrency;

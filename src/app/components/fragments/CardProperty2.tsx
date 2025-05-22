@@ -49,7 +49,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
       <div className="mx-16 mt-32 my-16 lg:m-24 items-start flex-grow">
         <div className="flex items-end">
           <div className="text-syne text-heading-4-mobile lg:text-heading-5">
-            ${property.price.toLocaleString()}
+           {property.price?.toLocaleString() ? `$${property.price.toLocaleString()}` : '-'}
           </div>
           <div className="text-lg-regular text-secondary-dark-80">/ month</div>
         </div>
