@@ -148,6 +148,7 @@ module.exports = {
       188: toRem(188),
       190: toRem(190),
       200: toRem(200),
+      206: toRem(206),
       216: toRem(216),
       221: toRem(221),
       228: toRem(228),

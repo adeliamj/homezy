@@ -21,3 +21,10 @@ export type PropertyType = {
     lng: number;
   };
 };
+
+
+export interface MarkerType {
+  position: [number, number];
+  text: string;
+  id: string | number;
+}

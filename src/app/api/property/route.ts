@@ -21,8 +21,8 @@ export async function GET() {
         officeAddress: "2699 Green Valley, Highland Lake, FL",
       },
       location: {
-        lat: 27.2986,
-        lng: -81.3623,
+        lat: -7.9982494697595135,
+        lng: 112.62416428984933
       },
     },
     {
@@ -42,9 +42,9 @@ export async function GET() {
         company: "Beach Pros Realty Inc.",
         officeAddress: "37 Ambleside Gardens, Ilford, IG4 5HH",
       },
-      location: {
-        lat: 51.5755,
-        lng: 0.0555,
+       location: {
+        lat: -8.000934912323753,
+        lng: 112.62739824721471
       },
     },
     {
@@ -65,8 +65,8 @@ export async function GET() {
         officeAddress: "3 Leame Close, Hull, HU3 6ND",
       },
       location: {
-        lat: 53.7521,
-        lng: -0.3696,
+        lat: -7.998030160807428,
+        lng: 112.61928775565138,
       },
     },
     {
@@ -87,8 +87,8 @@ export async function GET() {
         officeAddress: "28B Highgate Road, London, NW5 1NS",
       },
       location: {
-        lat: 51.5557,
-        lng: -0.1415,
+        lat: -8.00239397324834,
+        lng: 112.62045025944212,
       },
     },
   ];

@@ -13,17 +13,13 @@ import PopupFilter from "@components/fragments/PopupFilter";
 const Maps = dynamic(() => import("@components/ui/Maps"), { ssr: false });
 
 import {
-  HotelFilterSelectedType,
-  HotelFilterType,
-  HotelResultType,
-  HotelSearchValuesType,
   MarkerType,
-} from "app/types/hotel.type";
+} from "app/types/property.type";
 
 interface PropertyItems {
   id: number;
   image: string;
-  price: number;
+  originalPrice: number;
   per?: string;
   title: string;
   address: string;
@@ -31,6 +27,11 @@ interface PropertyItems {
   bedrooms: number;
   bathrooms: number;
   size: string;
+  location: { 
+    lat: number;
+    lng: number;
+  };
+  discountPrice?: number;
 }
 
 const Page = () => {
@@ -38,12 +39,8 @@ const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isGridView, setIsGridView] = useState(true);
 
-  const [hotelResult, setHotelResult] = useState<HotelResultType[] | null>(
-    null
-  );
   const [markers, setMarkers] = useState<MarkerType[]>([]);
 
-  // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
   const totalPages = Math.ceil(properties.length / itemsPerPage);
@@ -57,8 +54,21 @@ const Page = () => {
     const fetchProperties = async () => {
       try {
         const res = await fetch("/api/property");
-        const data = await res.json();
+        const data: PropertyItems[] = await res.json(); 
         setProperties(data);
+
+        setMarkers(
+          data
+            .filter((item) => item.location)
+            .map((item) => ({
+              position: [item.location.lat, item.location.lng],
+              text: item.discountPrice
+                ? `${item.discountPrice}`
+                : `${item.originalPrice}`,
+              id: item.id,
+              property: item,
+            }))
+        );
       } catch (error) {
         console.error("Failed to fetch properties:", error);
       } finally {
@@ -67,7 +77,9 @@ const Page = () => {
     };
 
     fetchProperties();
-  }, []);
+  }, []); 
+
+
 
   const getPageNumbers = () => {
     let start = currentPage;
@@ -85,25 +97,6 @@ const Page = () => {
 
   const [showFilter, setShowFilter] = useState(false);
 
-  useEffect(() => {
-    if (hotelResult) {
-      setMarkers(
-        hotelResult
-          .filter((item) => item.location)
-          .map((item) => ({
-            position: [item.location!.lat, item.location!.lng] as [
-              number,
-              number
-            ],
-            text: item.discountPrice
-              ? `${item.discountPrice}`
-              : `${item.originalPrice}`,
-            idHotel: item.idHotel,
-          }))
-      );
-    }
-  }, [hotelResult]);
-
   return (
     <>
       <div className="text-heading-2-mobile text-syne 2lg:text-heading-2">
@@ -111,7 +104,7 @@ const Page = () => {
       </div>
 
       <div className="mt-32 2lg:mt-40 flex-col 2lg:flex-row 2lg:flex gap-24 w-full">
-        <div className='w-full'>
+        <div className="w-full">
           <CTA />
         </div>
 
@@ -132,8 +125,8 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="mt-40 z-[0] h-240 w-full overflow-hidden rounded-2xl bg-gray-30 md:h-410 xxxl:h-410-fluid xxxl:rounded-2xl-fluid">
-        <Maps markers={markers} />
+      <div className="mt-40 z-[0] h-410 w-full overflow-hidden rounded-2xl bg-gray-30 md:h-400 xxxl:h-400-fluid xxxl:rounded-2xl-fluid">
+        {!isLoading && <Maps markers={markers} />}
       </div>
 
       <div className="mt-32 mb-270">

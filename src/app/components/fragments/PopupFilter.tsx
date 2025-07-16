@@ -111,7 +111,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
               : ""
           }`}
         >
-          <Gallery className="w-20 h-20 text-secondary-white" />
+          <Gallery className="w-20 h-20" />
           <span>For Rent</span>
         </div>
       </div>

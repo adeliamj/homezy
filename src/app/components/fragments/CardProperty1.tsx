@@ -13,7 +13,7 @@ interface Property {
   id: number;
   title: string;
   image: string;
-  price: number;
+  originalPrice: number;
   per?: string;
   address: string;
   description?: string;
@@ -83,8 +83,8 @@ const CardProperty1 = () => {
         <div className="pb-24 lg:pb-32 2lg:gap-165 lg:flex justify-between">
           <div className="flex items-end">
             <div className="text-syne text-heading-3">
-              {property.price?.toLocaleString()
-                ? `$${property.price.toLocaleString()}`
+              {property.originalPrice?.toLocaleString()
+                ? `$${property.originalPrice.toLocaleString()}`
                 : "-"}
             </div>
             <div className="text-lg-regular text-secondary-dark-80">

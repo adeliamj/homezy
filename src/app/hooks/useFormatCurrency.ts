@@ -8,7 +8,7 @@ const useformatCurrency = () => {
       if (currency === "rupiah") {
         return `IDR ${new Intl.NumberFormat("id-ID").format(price)}`;
       } else if (currency === "dollar") {
-        return `USD ${new Intl.NumberFormat("en-US").format(price)}`;
+        return `$ ${new Intl.NumberFormat("en-US").format(price)}`;
       }
       return price.toString();
     },
