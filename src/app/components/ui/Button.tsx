@@ -27,7 +27,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseClass =
-    'flex h-fit w-fit items-center justify-center rounded-xl transition-all duration-500 ease-in-out';
+    'flex h-fit w-fit items-center justify-center gap-8 rounded-xl transition-all duration-500 ease-in-out';
 
   const variantClass =
     variant === 'primary'
@@ -35,10 +35,10 @@ const Button = ({
       : 'border-transparent bg-secondary-dark-100 text-secondary-white';
 
   const sizeClassMap: Record<string, string> = {
-    xl: 'gap-8 px-32 py-16 text-normal-bold',
-    lg: 'gap-8 px-32 py-16 text-normal-bold',
-    md: 'gap-8 px-32 py-18 text-xs-medium',
-    sm: 'gap-4 px-32 py-18 text-xxs-medium',
+    xl: 'px-32 py-16 text-normal-bold',
+    lg: 'px-32 py-16 text-normal-bold',
+    md: 'px-24 py-12 text-xs-medium',
+    sm: 'px-24 py-12 text-xxs-medium',
   };
 
   const mobileClass = sizeClassMap[mobileSize];
@@ -50,21 +50,19 @@ const Button = ({
       {...props}
     >
       {leadingIcon && (
-        <ButtonIcon
-          size={mobileSize}
-          desktopSize={desktopSize}
-          className={leadingIconClassName}
-        >
+        <ButtonIcon className={leadingIconClassName}>
           {leadingIcon}
         </ButtonIcon>
       )}
-      <span className="whitespace-nowrap text-normal-bold">{text && <ButtonText className={textClassName}>{text}</ButtonText>}</span>
+
+      {text && (
+        <span className="whitespace-nowrap text-normal-bold">
+          <ButtonText className={textClassName}>{text}</ButtonText>
+        </span>
+      )}
+
       {trailingIcon && (
-        <ButtonIcon
-          size={mobileSize}
-          desktopSize={desktopSize}
-          className={trailingIconClassName}
-        >
+        <ButtonIcon className={trailingIconClassName}>
           {trailingIcon}
         </ButtonIcon>
       )}
@@ -79,25 +77,13 @@ const ButtonText: React.FC<ButtonTextProps> = ({ className, children }) => (
 );
 
 interface ButtonIconProps extends React.HTMLAttributes<HTMLDivElement> {
-  size: 'xl' | 'lg' | 'md' | 'sm';
-  desktopSize: 'xl' | 'lg' | 'md' | 'sm';
   className?: string;
 }
 
-const ButtonIcon: React.FC<ButtonIconProps> = ({ size, desktopSize, className, ...props }) => {
-  const sizeMap: Record<string, string> = {
-    xl: 'h-52 w-145',
-    lg: 'h-52 w-145',
-    md: 'h-16 w-16',
-    sm: 'h-12 w-12',
-  };
-
-  const mobileSizeClass = sizeMap[size];
-  const desktopSizeClass = `md:${sizeMap[desktopSize]}`;
-
-  return (
-    <div className={`${mobileSizeClass} ${desktopSizeClass} text-inherit ${className || ''}`} {...props} />
-  );
-};
+const ButtonIcon: React.FC<ButtonIconProps> = ({ className, children, ...props }) => (
+  <div className={`flex items-center justify-center ${className || ''}`} {...props}>
+    {children}
+  </div>
+);
 
 export default Button;
