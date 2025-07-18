@@ -62,7 +62,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
         <div className="w-full flex flex-grow justify-between border-t border-t-brand-lavender-40 pt-16 px-16 mt-16 ">
           {items.map((item, index) => (
             <div key={index}>
-              <div className="flex text-small-regular gap-8">
+              <div className="flex text-sm-regular gap-8">
                 <div className="text-secondary-dark-100">{item.icon}</div>
                 <div className="text-secondary-dark-80">{item.value}</div>
               </div>
