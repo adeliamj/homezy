@@ -1,46 +1,44 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { cn } from "@/app/lib/utils";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   isDisabled?: boolean;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
-  value: string; 
-  placeholder?: string;
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
   onClick?: () => void;
 }
 
 export const TextInput = ({
   className,
-  leftIcon,
-  rightIcon,
-  disabled,
+  iconLeft,
+  iconRight,
   onClick,
   type = "text",
   ...props
 }: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [inputType, setInputType] = useState(type);
 
   return (
     <div
       className={cn(
-        "border border-secondary-dark-20 rounded-15 py-12 px-16 h-50 flex items-center focus:border-transparent focus:outline-none",
+        "border border-secondary-dark-20 rounded-15 py-12 px-16 h-50 flex items-center gap-8 bg-white",
         className
       )}
       onClick={onClick}
     >
+      {iconLeft && <div>{iconLeft}</div>}
       <input
         ref={inputRef}
         {...props}
+        type={type}
+        readOnly={props.readOnly}
         className={cn(
-          "w-fit text-syne text-normal-regular text-secondary-dark-40 focus:outline-none"
+          "flex-1 text-syne text-normal-regular text-secondary-dark-40 focus:outline-none bg-transparent"
         )}
-        disabled={disabled}
-        type={inputType}
       />
+      {iconRight && <div>{iconRight}</div>}
     </div>
   );
 };

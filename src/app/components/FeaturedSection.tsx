@@ -8,7 +8,7 @@ import CardProperty2 from "./fragments/CardProperty2";
 interface PropertyItems {
   id: number;
   image: string;
-  price: number;
+  originalPrice: number;
   per?: string;
   title: string;
   address: string;
