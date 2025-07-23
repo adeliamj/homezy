@@ -49,13 +49,13 @@ const TestimonialSection = () => {
       </div>
       <div className="hidden pt-40 justify-center items-center gap-40 md:flex">
         <div
-          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="cursor-pointer text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={() => scrollTestimonials("left")}
         >
           <ArrowRight className="w-32 h-32 transform rotate-180" />
         </div>
         <div
-          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="cursor-pointer text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={() => scrollTestimonials("right")}
         >
           <ArrowRight className="w-32 h-32 " />
@@ -63,13 +63,13 @@ const TestimonialSection = () => {
       </div>
       <div className="md:hidden pt-40 justify-center items-center gap-40 flex">
         <div
-          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="cursor-pointer text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={prevCard}
         >
-          <ArrowRight className="w-32 h-32 transform rotate-180" />
+          <ArrowRight className="w-32 h-32 transform rotate-180 " />
         </div>
         <div
-          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="cursor-pointer  text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={nextCard}
         >
           <ArrowRight className="w-32 h-32 " />

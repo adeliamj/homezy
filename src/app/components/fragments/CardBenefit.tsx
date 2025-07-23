@@ -34,13 +34,12 @@ const CardBenefit = ({ currentIndex = 0 }: { currentIndex?: number }) => {
 
   return (
     <>
-      {/* Mobile */}
-      <div className="block lg:hidden">
-        <div className="lg:w-362 w-full bg-secondary-white rounded-15 border lg:p-40 p-24">
+      <div className="block lg:hidden ">
+        <div className="md:min-w-365 w-full bg-secondary-white rounded-15 border lg:p-40 p-24">
           <div className="bg-brand-lavender-40 rounded-15 p-20 w-90 h-90">
             {iconMap[items[currentIndex].icon]}
           </div>
-          <div className="pt-64 text-heading-5-mobile lg:text-heading-5text-syne">
+          <div className="pt-64 text-heading-5-mobile lg:text-heading-5font-syne">
             {items[currentIndex].title}
           </div>
           <div className="pt-8 text-normal-regular text-secondary-dark-80">
@@ -59,7 +58,7 @@ const CardBenefit = ({ currentIndex = 0 }: { currentIndex?: number }) => {
             <div className="bg-brand-lavender-40 rounded-15 p-20 w-90 h-90">
               {iconMap[item.icon]}
             </div>
-            <div className="pt-64 text-heading-5-mobile lg:text-heading-5text-syne">
+            <div className="pt-64 text-heading-5-mobile lg:text-heading-5font-syne">
               {item.title}
             </div>
             <div className="pt-8 text-normal-regular text-secondary-dark-80">

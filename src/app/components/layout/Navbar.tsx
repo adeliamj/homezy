@@ -7,9 +7,9 @@ import Menu from "@/assets/icons/menu.svg";
 
 const Navbar = () => {
   return (
-    <div className="flex my-30 justify-between items-center text-secondary-dark-100">
+    <div className="flex my-30 justify-between items-center text-secondary-dark-100 mx-20 md:mx-60 2lg:mx-140">
       <Image src={Logo} width={152} height={40} alt="Logo" className='w-114 h-30 lg:w-152 lg:h-40' />
-      <div className="hidden md:flex list-none md:gap-18 lg:gap-28 2lg:gap-64 text-navbar">
+      <div className="hidden md:flex list-none md:gap-18 lg:gap-28 2lg:gap-64 text-navbar cursor-pointer">
         <li>Home</li>
         <li>Properties</li>
         <li>Agents</li>

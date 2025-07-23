@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import PhoneCall from "@/assets/icons/phone-call.svg";
@@ -35,7 +35,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
 
   return (
     <>
-      <div className="2lg:hidden">
+      <div className="2lg:hidden cursor-pointer ">
         <div className="w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center">
           <div>
             <div className="text-heading-6">{items[currentIndex].name}</div>
@@ -46,7 +46,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
               {socialMedias.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center bg-secondary-dark-100 p-6 rounded-48 w-24 h-24 text-secondary-white"
+                  className="cursor-pointer flex items-center justify-center bg-secondary-dark-100 p-6 rounded-48 w-24 h-24 text-secondary-white"
                   aria-label={item.label}
                 >
                   {item.icon}
@@ -68,7 +68,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="hidden w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 2lg:flex justify-between items-center"
+          className="cursor-pointer  hidden w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 2lg:flex justify-between items-center"
         >
           <div>
             <div className="text-heading-6">{item.name}</div>

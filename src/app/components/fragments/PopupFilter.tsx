@@ -90,7 +90,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
 
   return (
     <div className="relative p-24 w-[500px] bg-secondary-white rounded-15 shadow-lg">
-      <div className="text-heading-5 text-syne">More Filter</div>
+      <div className="text-heading-5 font-syne">More Filter</div>
 
       <div className="mt-24 flex bg-brand-lavender-20 rounded-15 p-6 text-normal-bold w-full select-none">
         <div

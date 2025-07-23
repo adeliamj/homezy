@@ -48,14 +48,14 @@ const PopupCardProperty: React.FC<PopupCardProperty> = ({ property }) => {
       </div>
       <div className="mx-12 my-12 items-start flex-grow">
         <div className="flex items-end">
-          <div className="text-syne text-normal-bold lg:text-normal-bold">
+          <div className="font-syne text-normal-bold lg:text-normal-bold">
             {property.originalPrice?.toLocaleString()
               ? `$${property.originalPrice.toLocaleString()}`
               : "-"}
           </div>
           <div className="text-sm-regular text-secondary-dark-80">/ month</div>
         </div>
-        <div className="text-syne text-sm-bold whitespace-nowrap overflow-hidden text-ellipsis">
+        <div className="font-syne text-sm-bold whitespace-nowrap overflow-hidden text-ellipsis">
           {property.title}
         </div>
 

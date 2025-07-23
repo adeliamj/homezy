@@ -39,13 +39,13 @@ const CardCategories = () => {
               {iconMap[item.icon]}
             </div>
             <div>
-              <div className="text-heading-5text-syne">{item.title}</div>
+              <div className="text-heading-5font-syne">{item.title}</div>
               <div className="text-lg-regular text-secondary-dark-80">
                 {item.total}
               </div>
             </div>
           </div>
-          <div className="gap-8 flex text-sohne">
+          <div className="gap-8 flex text-sohne cursor-pointer">
             View <Send className="w-20 h-20" />
           </div>
         </div>

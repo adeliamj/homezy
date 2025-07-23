@@ -35,7 +35,7 @@ export const TextInput = ({
         type={type}
         readOnly={props.readOnly}
         className={cn(
-          "flex-1 text-syne text-normal-regular text-secondary-dark-40 focus:outline-none bg-transparent"
+          "flex-1 font-syne text-normal-regular text-secondary-dark-40 focus:outline-none bg-transparent"
         )}
       />
       {iconRight && <div>{iconRight}</div>}

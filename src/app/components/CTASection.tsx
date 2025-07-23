@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,8 +7,9 @@ const CTASection = () => {
   return (
     <div className="my-80 w-full lg:h-380 gap-77 bg-brand-lavender-80 border border-secondary-dark-100 rounded-15 flex overflow-hidden">
       <div className="py-24 lg:py-56 pl-24 lg:pl-72 w-416">
-        <div className="text-heading-2-mobile lg:text-heading-2 text-secondary-white text-syne ">
-          Subscribe To Our Newsletter
+        <div className="text-heading-2-mobile lg:text-heading-2 text-secondary-white whitespace-nowrap font-syne ">
+          <p>Subscribe To</p>
+          <p>Our Newsletter</p>
         </div>
         <div className="pt-8 pb-24 text-lg-regular text-secondary-white w-287 lg:w-416">
           Join our newsletter to stay up to date on features and releases.

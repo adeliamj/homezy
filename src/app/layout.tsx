@@ -27,7 +27,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${hankenGrotesk.variable} ${syne.variable}`}>
-      <body className="bg-white font-hanken mx-20 md:mx-60 2lg:mx-140 bg-background">
+      <body className="bg-white font-hanken bg-background">
         <Navbar />
         {children}
         <Footer />

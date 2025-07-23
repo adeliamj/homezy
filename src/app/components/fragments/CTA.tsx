@@ -44,13 +44,16 @@ const CTA = () => {
             </div>
           </div>
         ))}
-        <Button
-          variant="secondary"
-          mobileSize="md"
-          desktopSize="lg"
-          text="Browse"
-          className="w-full lg:w-fit"
-        />
+        <div className='cursor-pointer'>
+          <Button
+            type="button"
+            variant="secondary"
+            mobileSize="md"
+            desktopSize="lg"
+            text="Browse"
+            className="w-full lg:w-fit cursor-pointer"
+          />
+        </div>
       </div>
       <div></div>
     </div>

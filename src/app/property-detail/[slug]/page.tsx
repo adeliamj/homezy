@@ -168,7 +168,7 @@ const page: React.FC<PopupFilterProps> = ({ onApply }) => {
   );
 
   return (
-    <div className="flex flex-col gap-40">
+    <div className="flex flex-col gap-40 mx-20 md:mx-60 2lg:mx-140">
       <div className="flex flex-row gap-16 text-secondary-dark-100 items-center">
         <ArrowLeft className="w-24 h-24" />
         <p className=" text-normal-medium md:text-lg-medium ">Back To Search</p>
@@ -233,7 +233,7 @@ const page: React.FC<PopupFilterProps> = ({ onApply }) => {
             <div className="flex flex-col gap-32">
               <div className="flex flex-col gap-24 md:flex-row justify-between">
                 <div className="flex flex-col gap-8">
-                  <div className="text-syne text-heading-3-mobile lg:text-heading-3 no-whitespace">
+                  <div className="font-syne text-heading-3-mobile lg:text-heading-3 no-whitespace">
                     Beacon Homes LLC
                   </div>
                   <div className="md:text-xl-regular text-lg-regular text-secondary-dark-80">
@@ -282,7 +282,7 @@ const page: React.FC<PopupFilterProps> = ({ onApply }) => {
                 the Conservatory of Flowers to the south. Close to multiple
                 markets, cafes, restaurants, transportation.
               </div>
-              <div className="flex flex-row gap-8 items-center">
+              <div className="flex flex-row gap-8 items-center cursor-pointer">
                 <Play className="w-24 h-24" />
                 <p className="font-hanken text-normal-bold">View Video Tour</p>
               </div>

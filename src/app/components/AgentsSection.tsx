@@ -20,7 +20,7 @@ const AgentsSection = () => {
         <div className="text-heading-2-mobile 2lg:text-heading-2 font-syne">
           Meet Our Agents
         </div>
-        <div className="text-lg-bold flex gap-8">
+        <div className="text-lg-bold flex gap-8 cursor-pointer">
           Browse All Agents
           <ArrowRight className="w-24 h-24" />
         </div>

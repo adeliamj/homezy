@@ -23,12 +23,12 @@ const socialMedias = [
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full md:overflow-hidden">
+    <div className=" relative w-full  mx-[-20] md:mx-[-60] 2lg:mx-[-140] pl-20 md:pl-60 2lg:pl-140">
       <Image
         src={Pattern}
         alt="Background Pattern"
         fill
-        className="hidden lg:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-1484 lg:h-692"
+        className="hidden lg:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-[150%] lg:h-full"
       />
       <div className="relative 2lg:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
         <div className="2lg:w-608">
@@ -39,7 +39,7 @@ const HeroSection = () => {
             We are creative people who provide the best way to you who want to
             have a new comfortable and suitable place to live
           </div>
-          <div className="mt-40 lg:mt-64 2lg:w-763">
+          <div className="mt-40 lg:mt-64 2lg:w-763 z-[10000]">
             <CTA />
           </div>
         </div>
@@ -84,7 +84,7 @@ const HeroSection = () => {
                     ))}
                   </div>
                 </div>
-                <div className="bg-brand-lavender-40 w-48 h-48 md:w-74 md:h-74">
+                <div className="bg-brand-lavender-40 w-48 h-48 md:w-74 md:h-74 rounded-8">
                   <Image
                     src={ProfilePerson}
                     width={74}

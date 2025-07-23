@@ -98,8 +98,8 @@ const Page = () => {
   const [showFilter, setShowFilter] = useState(false);
 
   return (
-    <>
-      <div className="text-heading-2-mobile text-syne 2lg:text-heading-2">
+    <div className='mx-20 md:mx-60 2lg:mx-140'>
+      <div className="text-heading-2-mobile font-syne 2lg:text-heading-2">
         Search Properties
       </div>
 
@@ -131,7 +131,7 @@ const Page = () => {
 
       <div className="mt-32 mb-270">
         <div className="flex justify-between">
-          <p className="text-syne text-heading-4">
+          <p className="font-syne text-heading-4">
             {properties.length} Results
           </p>
           <div className="flex gap-8">
@@ -222,7 +222,7 @@ const Page = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

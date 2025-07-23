@@ -9,7 +9,7 @@ const CategoriesSection = () => {
     <div className="my-64 lg:my-80 ">
       <div className="justify-between lg:flex">
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne">Featured Categories</div>
-        <div className="text-lg-bold flex gap-8">
+        <div className="text-lg-bold flex gap-8 cursor-pointer">
         Browse All Categories
           <ArrowRight className="w-24 h-24" />
         </div>

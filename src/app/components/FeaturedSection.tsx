@@ -48,7 +48,7 @@ const FeaturedSection = () => {
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne">
           Featured Listings
         </div>
-        <div className="text-lg-bold flex gap-8">
+        <div className="text-lg-bold flex gap-8 cursor-pointer">
           Browse All Featured
           <ArrowRight className="w-24 h-24" />
         </div>

@@ -25,8 +25,8 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
   return (
     <>
       {/* Mobile */}
-      <div className="block lg:hidden">
-        <div className="lg:w-365 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
+      <div className="block lg:hidden cursor-pointer ">
+        <div className="md:min-w-362 w-full rounded-15 border border-brand-lavender-40 bg-secondary-white">
           <div className="w-full h-350 overflow-hidden rounded-t-15 border-t border-t-brand-lavender-40">
             <Image
               src={items[currentIndex].image}
@@ -37,7 +37,7 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
             />
           </div>
           <div className="p-24">
-            <div className="text-heading-5text-syne pb-8">
+            <div className="text-heading-5font-syne pb-8">
               {items[currentIndex].title}
             </div>
             <div className="flex gap-8">
@@ -50,7 +50,7 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
         </div>
       </div>
       {/* Desktop */}
-      <div className="hidden lg:flex gap-32">
+      <div className="hidden lg:flex gap-32 cursor-pointer ">
         {items.map((item, index) => (
           <div
             key={index}
@@ -66,7 +66,7 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
               />
             </div>
             <div className="p-24">
-              <div className="text-heading-5text-syne pb-8">{item.title}</div>
+              <div className="text-heading-5font-syne pb-8">{item.title}</div>
               <div className="flex gap-8">
                 <House className="w-24 h-24" />
                 <div className="text-secondary-dark-80 text-lg-regular">

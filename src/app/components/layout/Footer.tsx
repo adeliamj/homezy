@@ -51,7 +51,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <div className="mt-64 mb-32 ">
+    <div className="mt-64 mb-32 mx-20 md:mx-60 2lg:mx-140">
       <div className="flex flex-col lg:flex-row text-secondary-dark-100 justify-between">
         <div>
           <Image
@@ -65,11 +65,11 @@ const Footer = () => {
             We are creative people who provide the best way to you who want to
             have a new confortable and suitable place to live
           </p>
-          <div className="flex list-none gap-24">
+          <div className="flex list-none gap-24 cursor-pointer">
             {socialMedias.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-secondary-dark-100 p-8 rounded-48 w-32 h-32 text-secondary-white"
+                className="cursor-pointer flex items-center justify-center bg-secondary-dark-100 p-8 rounded-48 w-32 h-32 text-secondary-white"
                 aria-label={item.label}
               >
                 {item.icon}
@@ -77,7 +77,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between gap-104 mt-64 lg:mt-0">
+        <div className="flex flex-col md:flex-row justify-between gap-104 mt-64 lg:mt-0 ">
           {footerLinks.map((section, index) => (
             <div key={index}>
               <div className="pb-32 text-normal-regular text-secondary-dark-80">
@@ -86,8 +86,8 @@ const Footer = () => {
               <div
                 className={`${
                   section.title === "Pages"
-                    ? "flex flex-row list-none gap-64 lg:gap-80 text-normal-medium whitespace-nowrap"
-                    : "list-none text-normal-medium"
+                    ? "flex flex-row list-none gap-64 lg:gap-80 text-normal-medium whitespace-nowrap cursor-pointer"
+                    : "list-none text-normal-medium cursor-pointer"
                 }`}
               >
                 {section.title === "Pages" ? (

@@ -9,11 +9,12 @@ export async function GET() {
       title: "COVA Home Realty",
       address: "2699 Green Valley, Highland Lake, FL",
       description:
-        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation",
+        "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
       bedrooms: 3,
       bathrooms: 4,
       size: "6x8 m²",
       type: "Modern Loft",
+      featured: true,
       contact: {
         name: "Edwin Martins",
         role: "Property Advisor",
@@ -22,7 +23,7 @@ export async function GET() {
       },
       location: {
         lat: -7.9982494697595135,
-        lng: 112.62416428984933
+        lng: 112.62416428984933,
       },
     },
     {
@@ -36,15 +37,16 @@ export async function GET() {
       bathrooms: 4,
       size: "5x7 m²",
       type: "Beach House",
+      featured: true,
       contact: {
         name: "Sarah Johnson",
         role: "Senior Agent",
         company: "Beach Pros Realty Inc.",
         officeAddress: "37 Ambleside Gardens, Ilford, IG4 5HH",
       },
-       location: {
+      location: {
         lat: -8.000934912323753,
-        lng: 112.62739824721471
+        lng: 112.62739824721471,
       },
     },
     {
@@ -58,6 +60,7 @@ export async function GET() {
       bathrooms: 2,
       size: "5x7 m²",
       type: "Townhouse",
+      featured: true,
       contact: {
         name: "James Allen",
         role: "Sales Manager",
@@ -80,6 +83,7 @@ export async function GET() {
       bathrooms: 2,
       size: "5x7 m²",
       type: "Modern Apartment",
+      featured: true,
       contact: {
         name: "Sarah Johnson",
         role: "Senior Agent",
@@ -102,9 +106,10 @@ export async function GET() {
     return {
       ...base,
       id: i + 1,
-      title: `${base.title} #${i + 1}`,
+      title: base.title,
       originalPrice,
       discountPrice,
+      featured: base.featured ?? false,
     };
   });
 
