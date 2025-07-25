@@ -10,10 +10,10 @@ import CTASection from "@components/CTASection";
 export default async function Home() {
   return (
     <div className="">
-      <div className="relative overflow-hidden ml-20 md:ml-60 2lg:ml-140">
+      <div className="relative overflow-hidden ml-20 md:ml-60 2lg:ml-140 xl:ml-80 xxl:ml-140">
         <HeroSection />
       </div>
-      <div className="mx-20 md:mx-60 2lg:mx-140">
+      <div className="mx-20 md:mx-60 2lg:mx-140 xl:mx-80 xxl:mx-140">
         <FeaturedSection />
         <BenefitSection />
         <CategoriesSection />

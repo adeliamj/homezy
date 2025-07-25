@@ -168,7 +168,7 @@ const page: React.FC<PopupFilterProps> = ({ onApply }) => {
   );
 
   return (
-    <div className="flex flex-col gap-40 mx-20 md:mx-60 2lg:mx-140">
+    <div className="flex flex-col gap-40 mx-20 md:mx-60 2lg:mx-140 xl:mx-80 xxl:mx-140">
       <div className="flex flex-row gap-16 text-secondary-dark-100 items-center">
         <ArrowLeft className="w-24 h-24" />
         <p className=" text-normal-medium md:text-lg-medium ">Back To Search</p>

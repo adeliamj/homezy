@@ -36,7 +36,7 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
   return (
     <>
       <div className="2lg:hidden cursor-pointer ">
-        <div className="w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center">
+        <div className="-full lg:min-w-300 xl:min-w-365  bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center">
           <div>
             <div className="text-heading-6">{items[currentIndex].name}</div>
             <div className="text-lg-regular text-secondary-dark-80">
@@ -68,10 +68,10 @@ const CardAgents = ({ currentIndex = 0 }: { currentIndex?: number }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="cursor-pointer  hidden w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 2lg:flex justify-between items-center"
+          className="cursor-pointer  hidden w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 gap-8 2lg:flex justify-between items-center"
         >
           <div>
-            <div className="text-heading-6">{item.name}</div>
+            <div className="text-heading-5-mobile md:text-heading-5 font-syne ">{item.name}</div>
             <div className="text-lg-regular text-secondary-dark-80">
               {item.position}
             </div>

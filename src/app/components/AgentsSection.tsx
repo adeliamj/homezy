@@ -15,7 +15,7 @@ const AgentsSection = () => {
   };
 
   return (
-    <div className="my-64 2lg:my-80 ">
+    <div className="py-64 lg:py-80 ">
       <div className="justify-between lg:flex">
         <div className="text-heading-2-mobile 2lg:text-heading-2 font-syne">
           Meet Our Agents

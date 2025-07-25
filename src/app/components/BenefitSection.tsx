@@ -17,7 +17,7 @@ const BenefitSection = () => {
 
   return (
     <div className="py-64 lg:py-80 ">
-      <div className="justify-between lg:flex items-center">
+      <div className="justify-between md:flex items-center">
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne lg:w-485">
           Comfort Is Our Top Priority For You
         </div>

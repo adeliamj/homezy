@@ -6,7 +6,7 @@ import CardCategories from "@components/fragments/CardCategories";
 
 const CategoriesSection = () => {
   return (
-    <div className="my-64 lg:my-80 ">
+    <div className="py-64 lg:py-80 ">
       <div className="justify-between lg:flex">
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne">Featured Categories</div>
         <div className="text-lg-bold flex gap-8 cursor-pointer">

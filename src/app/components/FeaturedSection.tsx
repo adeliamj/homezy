@@ -43,7 +43,7 @@ const FeaturedSection = () => {
     [2, 3, 4].includes(property.id)
   );
   return (
-    <div className="my-64 lg:my-80">
+    <div className="py-64 lg:py-80 ">
       <div className="justify-between lg:flex pb-32">
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne">
           Featured Listings

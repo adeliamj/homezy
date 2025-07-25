@@ -41,7 +41,7 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
 
   return (
     <Link href="/property-detail/1" className="block cursor-pointer">
-      <div className="relative mt-24 lg:mt-0 w-full md:min-w-365 rounded-15 border border-brand-lavender-40 bg-secondary-white">
+      <div className="relative mt-24 lg:mt-0 w-full lg:min-w-300 xl:min-w-365 rounded-15 border border-brand-lavender-40 bg-secondary-white">
         {property.featured && (
           <Ribbon
             variant="featured"
@@ -72,11 +72,11 @@ const CardBenefit: React.FC<CardPropertyProps> = ({ property }) => {
             </div>
           </div>
 
-          <div className="font-syne text-heading-5-mobile lg:text-heading-5no-whitespace">
+          <div className="font-syne text-heading-5-mobile lg:text-heading-5 line-clamp-1">
             {property.title}
           </div>
 
-          <div className="pt-16 gap-8 text-secondary-dark-80 items-center">
+          <div className="pt-16 gap-8 text-secondary-dark-80 items-center line-clamp-1">
             <div className="text-normal-regular">{property.address}</div>
           </div>
 

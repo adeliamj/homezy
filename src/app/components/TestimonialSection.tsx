@@ -33,7 +33,7 @@ const TestimonialSection = () => {
     setCurrentIndex((prev) => (prev - 1 + 3) % 3);
   };
   return (
-    <div className="my-64 md:my-80">
+    <div className="py-64 md:py-80">
       <div className="justify-center flex">
         <div className="text-heading-2-mobile md:text-heading-2 font-syne">
           Kind Words From Our Customers

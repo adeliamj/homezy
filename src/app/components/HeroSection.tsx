@@ -23,7 +23,7 @@ const socialMedias = [
 
 const HeroSection = () => {
   return (
-    <div className=" relative w-full  mx-[-20] md:mx-[-60] 2lg:mx-[-140] pl-20 md:pl-60 2lg:pl-140">
+    <div className=" relative w-full  mx-[-20] md:mx-[-60] 2lg:mx-[-140]  xl:mx-[-80] xxl:mx-[-140] pl-20 md:pl-60 2lg:pl-140 xl:pl-80 xxl:pl-140">
       <Image
         src={Pattern}
         alt="Background Pattern"
@@ -31,7 +31,7 @@ const HeroSection = () => {
         className="hidden lg:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-[150%] lg:h-full"
       />
       <div className="relative 2lg:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
-        <div className="2lg:w-608">
+        <div className="2lg:w-608 xl:w-480 xxl:w-608 ">
           <div className="text-heading-1-mobile md:text-heading-1 font-syne">
             We help people to realize their dream property
           </div>

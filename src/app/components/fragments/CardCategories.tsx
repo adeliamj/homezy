@@ -8,7 +8,7 @@ import Send from "@/assets/icons/send.svg";
 
 const iconMap: Record<string, React.ReactElement> = {
   "buildings-1": <Buildings1 className="w-32 h-32" />,
-  "building": <Buildings2 className="w-32 h-32" />,
+  building: <Buildings2 className="w-32 h-32" />,
   "buildings-2": <Buildings3 className="w-32 h-32" />,
 };
 
@@ -26,13 +26,12 @@ const CardCategories = () => {
       .then((data) => setItems(data));
   }, []);
 
-
   return (
     <>
       {items.map((item, index) => (
         <div
           key={index}
-          className="mt-24 lg:mt-0 lg:w-362 w-full bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
+          className="mt-24 lg:mt-0 lg:w-362 w-full lg:min-w-300 xl:min-w-365 bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
         >
           <div className="flex gap-16 items-center">
             <div className="bg-brand-lavender-40 p-14 w-60 h-60 rounded-15">
@@ -40,7 +39,7 @@ const CardCategories = () => {
             </div>
             <div>
               <div className="text-heading-5font-syne">{item.title}</div>
-              <div className="text-lg-regular text-secondary-dark-80">
+              <div className="text-normal-regular lg:text-lg-regular text-secondary-dark-80 whitespace-nowrap">
                 {item.total}
               </div>
             </div>

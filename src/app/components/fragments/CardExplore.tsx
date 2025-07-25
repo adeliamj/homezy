@@ -37,7 +37,7 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
             />
           </div>
           <div className="p-24">
-            <div className="text-heading-5font-syne pb-8">
+            <div className="text-heading-5 font-syne pb-8">
               {items[currentIndex].title}
             </div>
             <div className="flex gap-8">
@@ -66,7 +66,7 @@ const CardExplore = ({ currentIndex = 0 }: { currentIndex?: number }) => {
               />
             </div>
             <div className="p-24">
-              <div className="text-heading-5font-syne pb-8">{item.title}</div>
+              <div className="text-heading-5 font-syne pb-8">{item.title}</div>
               <div className="flex gap-8">
                 <House className="w-24 h-24" />
                 <div className="text-secondary-dark-80 text-lg-regular">

@@ -32,7 +32,7 @@ const CardTestimonial = ({ currentIndex = 0 }: { currentIndex?: number }) => {
           </div>
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-syne text-heading-6">
+              <p className="font-syne text-heading-5 md:text-heading-5-mobile">
                 {items[currentIndex].name}
               </p>
               <p className="pt-6 text-lg-regular">
