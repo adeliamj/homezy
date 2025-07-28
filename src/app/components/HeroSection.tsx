@@ -17,7 +17,7 @@ import Twitter from "@/assets/icons/twitter.svg";
 const socialMedias = [
   { icon: <PhoneCall />, label: "Phone" },
   { icon: <Instagram />, label: "Instagram" },
-  { icon: <Facebook className="w-4 h-8" />, label: "Facebook" },
+  { icon: <Facebook className="w-3 h-6 md:w-4 md:h-8" />, label: "Facebook" },
   { icon: <Twitter />, label: "Twitter" },
 ];
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
         src={Pattern}
         alt="Background Pattern"
         fill
-        className="hidden lg:block object-cover -z-10 overflow-hidden  ml-680 w-114 h-30 lg:w-[150%] lg:h-full"
+        className="object-cover -z-10 overflow-hidden ml-120 mt-660 lg:mt-0 lg:ml-680 w-1162 h-552 lg:w-[150%] lg:h-full"
       />
       <div className="relative 2lg:flex flex-row gap-32 px-0 md:px-8 py-12 md:py-16 z-10">
         <div className="2lg:w-608 xl:w-480 xxl:w-608 ">
@@ -66,17 +66,17 @@ const HeroSection = () => {
             <div className="z-10">
               <div className="mt-32 md:mt-50 -ml-32 md:-ml-40 flex bg-secondary-white p-10 md:p-16 border-2 rounded-20 md:rounded-32 justify-between gap-26 md:gap-42 items-center">
                 <div className="whitespace-nowrap">
-                  <p className="text-sm-bold text-secondary-dark-100">
+                  <p className="font-satoshi  text-sm-bold md:text-normal-bold text-secondary-dark-100">
                     Edwin Martins
                   </p>
-                  <p className="text-xs-regular text-secondary-dark-80">
+                  <p className="font-soehne text-xs-regular md:text-sm-regular text-secondary-dark-80">
                     Property Advisor
                   </p>
-                  <div className="mt-7 md:mt-11 flex gap-8">
+                  <div className="mt-8 md:mt-11 flex gap-8">
                     {socialMedias.map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-center bg-secondary-dark-80 p-2 md:p-4 rounded-48 w-11 h-11 md:w-16 md:h-16 text-secondary-white"
+                        className="flex items-center justify-center bg-secondary-dark-80 p-3 md:p-4 rounded-48 w-12 h-12 md:w-16 md:h-16 text-secondary-white"
                         aria-label={item.label}
                       >
                         {item.icon}
