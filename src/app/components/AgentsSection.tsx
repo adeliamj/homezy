@@ -28,7 +28,7 @@ const AgentsSection = () => {
       <div className="pt-32 2lg:pt-64 grid 2lg:grid-cols-3 gap-32 w-full">
         <CardAgents currentIndex={currentIndex} />
       </div>
-      <div className="2lg:hidden pt-40 justify-center items-center gap-40 flex">
+            <div className="lg:hidden pt-40 justify-center items-center gap-40 flex">
         <div
           className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={prevCard}

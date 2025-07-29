@@ -50,8 +50,8 @@ const soehne = localFont({
       style: "normal",
     },
     {
-      path: "../fonts/soehne/test-soehne-leicht.woff2",
-      weight: "500",
+      path: "../fonts/soehne/test-soehne-kraftig.woff2",
+      weight: "400",
       style: "normal",
     },
     {

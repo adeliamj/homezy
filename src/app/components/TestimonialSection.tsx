@@ -61,15 +61,15 @@ const TestimonialSection = () => {
           <ArrowRight className="w-32 h-32 " />
         </div>
       </div>
-      <div className="md:hidden pt-40 justify-center items-center gap-40 flex">
+      <div className="lg:hidden pt-40 justify-center items-center gap-40 flex">
         <div
-          className="cursor-pointer text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={prevCard}
         >
-          <ArrowRight className="w-32 h-32 transform rotate-180 " />
+          <ArrowRight className="w-32 h-32 transform rotate-180" />
         </div>
         <div
-          className="cursor-pointer  text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
+          className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
           onClick={nextCard}
         >
           <ArrowRight className="w-32 h-32 " />

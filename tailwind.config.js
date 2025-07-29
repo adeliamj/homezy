@@ -269,7 +269,7 @@ module.exports = {
       ],
       "heading-5-mobile": [
         toRem(20),
-        { lineHeight: toRem(28), fontWeight: "700" },
+        { lineHeight: toRem(28), fontWeight: "600" },
       ],
       "heading-1": [
         toRem(72),
@@ -278,7 +278,7 @@ module.exports = {
       "heading-2": [toRem(48), { lineHeight: toRem(56), fontWeight: "700" }],
       "heading-3": [toRem(40), { lineHeight: toRem(40), fontWeight: "700" }],
       "heading-4": [toRem(32), { lineHeight: toRem(40), fontWeight: "700" }],
-      "heading-5": [toRem(24), { lineHeight: toRem(32), fontWeight: "700" }],
+      "heading-5": [toRem(24), { lineHeight: toRem(32), fontWeight: "600" }],
       "heading-6": [toRem(20), { lineHeight: toRem(28), fontWeight: "700" }],
       "xl-bold": [toRem(20), { lineHeight: toRem(28), fontWeight: "700" }],
       "xl-medium": [toRem(20), { lineHeight: toRem(28), fontWeight: "500" }],

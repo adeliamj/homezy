@@ -31,20 +31,20 @@ const CardCategories = () => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="mt-24 lg:mt-0 lg:w-362 w-full lg:min-w-300 xl:min-w-365 bg-secondary-white rounded-15 border border-brand-lavender-40 p-24 flex justify-between items-center"
+          className="mt-24 lg:mt-0 lg:w-362 w-full lg:min-w-300 xl:min-w-365 bg-secondary-white rounded-15 border border-brand-lavender-40 p-16 lg:p-24 flex justify-between items-center"
         >
           <div className="flex gap-16 items-center">
             <div className="bg-brand-lavender-40 p-14 w-60 h-60 rounded-15">
               {iconMap[item.icon]}
             </div>
-            <div>
-              <div className="text-heading-5font-syne">{item.title}</div>
-              <div className="text-normal-regular lg:text-lg-regular text-secondary-dark-80 whitespace-nowrap">
+            <div className='flex flex-col gap-2'>
+              <div className="text-heading-5-mobile md:text-heading-5 font-syne">{item.title}</div>
+              <div className="text-lg-regular text-secondary-dark-80 whitespace-nowrap">
                 {item.total}
               </div>
             </div>
           </div>
-          <div className="gap-8 flex text-sohne cursor-pointer">
+          <div className="gap-8 flex text-lg-bold text-sohne cursor-pointer">
             View <Send className="w-20 h-20" />
           </div>
         </div>

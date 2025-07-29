@@ -44,7 +44,7 @@ const FeaturedSection = () => {
   );
   return (
     <div className="py-64 lg:py-80 ">
-      <div className="justify-between lg:flex pb-32">
+      <div className="justify-between flex flex-col lg:flex-row gap-16 pb-32">
         <div className="text-heading-2-mobile lg:text-heading-2 font-syne">
           Featured Listings
         </div>

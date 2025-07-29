@@ -26,10 +26,8 @@ const BenefitSection = () => {
           because we are very concerned about our consumer satisfaction
         </div>
       </div>
-      <div
-        className="pt-32 lg:pt-64 gap-32 w-full lg:flex"
-      >
-       <CardBenefit currentIndex={currentIndex} />
+      <div className="pt-32 lg:pt-64 gap-32 w-full lg:flex">
+        <CardBenefit currentIndex={currentIndex} />
       </div>
       <div className="lg:hidden pt-40 justify-center items-center gap-40 flex">
         <div
@@ -40,7 +38,7 @@ const BenefitSection = () => {
         </div>
         <div
           className="text-secondary-white bg-secondary-dark-100 p-10 rounded-15 w-fit"
-         onClick={nextCard}
+          onClick={nextCard}
         >
           <ArrowRight className="w-32 h-32 " />
         </div>
