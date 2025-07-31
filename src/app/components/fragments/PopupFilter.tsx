@@ -92,6 +92,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
     <div className="relative p-24 w-[500px] bg-secondary-white rounded-15 shadow-lg">
       <div className="text-heading-5 font-syne">More Filter</div>
 
+      {/* SALE / RENT SWITCH */}
       <div className="mt-24 flex bg-brand-lavender-20 rounded-15 p-6 text-normal-bold w-full select-none">
         <div
           onClick={() => setActive("sale")}
@@ -116,6 +117,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
         </div>
       </div>
 
+      {/* CATEGORY */}
       <div className="mt-24">
         <p className="text-normal-bold">{Content.categories.title}</p>
         <div className="relative mt-12">
@@ -124,11 +126,12 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
             placeholder={Content.categories.placeholder}
             className="w-full"
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(value) => setCategory(String(value))}
           />
         </div>
       </div>
 
+      {/* BEDROOMS + BATHROOMS */}
       <div className="mt-24 flex gap-16">
         <div className="flex-1">
           <p className="text-normal-bold">{Content.bedrooms.title}</p>
@@ -138,7 +141,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
               placeholder={Content.bedrooms.placeholder}
               className="w-full"
               value={bedroom}
-              onChange={(e) => setBedroom(e.target.value)}
+              onChange={(value) => setBedroom(String(value))}
             />
           </div>
         </div>
@@ -151,12 +154,13 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
               placeholder={Content.bathrooms.placeholder}
               className="w-full"
               value={bathroom}
-              onChange={(e) => setBathroom(e.target.value)}
+              onChange={(value) => setBathroom(String(value))}
             />
           </div>
         </div>
       </div>
 
+      {/* FLOOR AREA */}
       <div className="mt-24">
         <p className="text-normal-bold">{Content.floorArea.title}</p>
         <div className="relative mt-12">
@@ -165,11 +169,12 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
             placeholder={Content.floorArea.placeholder}
             className="w-full"
             value={floorArea}
-            onChange={(e) => setFloorArea(e.target.value)}
+            onChange={(value) => setFloorArea(String(value))}
           />
         </div>
       </div>
 
+      {/* YEAR BUILD */}
       <div className="mt-24">
         <p className="text-normal-bold">{Content.yearMin.title}</p>
         <div className="flex gap-16">
@@ -180,7 +185,7 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
                 placeholder={Content.yearMin.placeholder}
                 className="w-full"
                 value={yearMin}
-                onChange={(e) => setYearMin(e.target.value)}
+                onChange={(value) => setYearMin(String(value))}
               />
             </div>
           </div>
@@ -192,13 +197,14 @@ const PopupFilter: React.FC<PopupFilterProps> = ({ onClose, onApply }) => {
                 placeholder={Content.yearMax.placeholder}
                 className="w-full"
                 value={yearMax}
-                onChange={(e) => setYearMax(e.target.value)}
+                onChange={(value) => setYearMax(String(value))}
               />
             </div>
           </div>
         </div>
       </div>
 
+      {/* BUTTONS */}
       <div className="mt-24 flex gap-16">
         <button
           onClick={onClose}
